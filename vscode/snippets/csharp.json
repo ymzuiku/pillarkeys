@@ -26,6 +26,7 @@
 			"public class $1 : MonoBehaviour {$0}"
 		]
 	},
+	/*
 	"void Awake() {}":{
 		"prefix": "Awake() {}",
 		"body": "void Awake() {$0}"
@@ -42,4 +43,5 @@
 		"prefix": "OnGUI() {}",
 		"body": "void OnGUI() {$0}"
 	}
+	*/
 }

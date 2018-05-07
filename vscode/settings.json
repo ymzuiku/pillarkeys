@@ -11,6 +11,7 @@
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.wordWrap": "on",
     "editor.tabSize": 2,
+    "editor.insertSpaces": true,
     "prettier.eslintIntegration": true,
     "editor.fontSize": 14,
     "window.zoomLevel": 0,
