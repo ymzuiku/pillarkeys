@@ -1,5 +1,10 @@
 # Mac相关所有热键备份
 
+## Document
+
+* [添加显示方式热键](https://github.com/ymzuiku/pillarkeys/wiki/添加显示方式热键)
+* [添加点线面热键](https://github.com/ymzuiku/pillarkeys/wiki/添加点线面热键)
+
 使用init相关的命令,把可以软链接的项目都链接过去,不可以软链接的需要手动复制
 
 ## 首次请执行

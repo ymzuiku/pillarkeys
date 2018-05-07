@@ -1,5 +1,5 @@
 {
-    "pasteImage.path": "${projectRoot}/docImage",
+    "pasteImage.path": "${projectRoot}/doc/img",
     "emmet.triggerExpansionOnTab": true,
     "omnisharp.useMono": true,
     "csharp.referencesCodeLens.enabled": false,
