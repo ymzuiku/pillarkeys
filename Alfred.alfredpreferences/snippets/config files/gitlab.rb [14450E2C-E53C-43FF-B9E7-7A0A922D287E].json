@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "external_url 'http:\/\/workos.top'\ngitlab_rails['gitlab_ssh_host'] = 'workos.top'\ngitlab_rails['gitlab_shell_ssh_port'] = 72",
+    "uid" : "14450E2C-E53C-43FF-B9E7-7A0A922D287E",
+    "name" : "gitlab.rb",
+    "keyword" : ""
+  }
+}

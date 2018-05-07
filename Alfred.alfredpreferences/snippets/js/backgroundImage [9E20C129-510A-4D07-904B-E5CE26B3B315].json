@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "backgroundImage: 'url(\/static\/test.png)',\nbackgroundSize: 'contain',\nbackgroundRepeat: 'no-repeat',\nwidth: 100,\nheight: 100,",
+    "uid" : "9E20C129-510A-4D07-904B-E5CE26B3B315",
+    "name" : "backgroundImage",
+    "keyword" : ""
+  }
+}

@@ -1,0 +1,59 @@
+{
+    "pasteImage.path": "${projectRoot}/docImage",
+    "emmet.triggerExpansionOnTab": true,
+    "omnisharp.useMono": true,
+    "csharp.referencesCodeLens.enabled": false,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+      },
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.wordWrap": "on",
+    "editor.tabSize": 2,
+    "prettier.eslintIntegration": true,
+    "editor.fontSize": 14,
+    "window.zoomLevel": 0,
+    "files.autoSave": "onFocusChange",
+    "files.exclude": {
+        "**/.git": false,
+        "**/.svn": true,
+        "**/Desktop": true,
+        "**/Code": true,
+        "**/Downloads": true,
+        "**/Library": true,
+        "**/Movies": true,
+        "**/Documents": true,
+        "**/Applications": true,
+        "**/.Trash": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true,
+        "**/*.meta": true,
+        "**/*.*.meta": true,
+        "**/*.unity": true,
+        "**/*.unityproj": true,
+        "**/*.mat": true,
+        "**/*.fbx": true,
+        "**/*.FBX": true,
+        "**/*.tga": true,
+        "**/*.cubemap": true,
+        "**/*.prefab": true,
+        "**/ProjectSettings": true,
+        "**/Temp": true
+    },
+    "files.associations": {
+        "*.js": "javascriptreact",
+        "*.jsx": "javascriptreact"
+    },
+    "workbench.iconTheme": "vs-nomo-dark",
+    "workbench.sideBar.location": "right",
+    "editor.minimap.enabled": false,
+    "workbench.editor.showTabs": false,
+    "workbench.activityBar.visible": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    }
+}

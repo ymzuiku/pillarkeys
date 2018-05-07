@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "STATUS=`defaults read com.apple.finder AppleShowAllFiles` \nif [ $STATUS == YES ]; \nthen \ndefaults write com.apple.finder AppleShowAllFiles NO \nelse \ndefaults write com.apple.finder AppleShowAllFiles YES \nfi \nkillall Finder",
+    "uid" : "DB22A50E-83BE-4A31-A27E-8C3DDB2C6053",
+    "name" : "show file in Finder",
+    "keyword" : ""
+  }
+}

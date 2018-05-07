@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\nusing UnityEngine.UI;\n\npublic class SetScrollView : MonoBehaviour\n{\n    public float elasticity = 0.155f;\n    public float scrollSensitivity = 2.0f;\n    ScrollRect scrollRect;\n    \/\/ Use this for initialization\n    void Start()\n    {\n        scrollRect = this.GetComponent<ScrollRect>();\n        scrollRect.elasticity = elasticity;\n        scrollRect.scrollSensitivity = scrollSensitivity;\n    }\n}\n",
+    "uid" : "219A0D21-C7B1-42F3-A14B-DC550E45716F",
+    "name" : "SetScrollView.cs",
+    "keyword" : ""
+  }
+}

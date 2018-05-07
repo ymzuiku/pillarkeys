@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "const isDev = process.env.NODE_ENV !== 'production'",
+    "uid" : "6BCADE0D-F90A-47E8-ACB0-BFD6C412F9D9",
+    "name" : "isDev",
+    "keyword" : ""
+  }
+}

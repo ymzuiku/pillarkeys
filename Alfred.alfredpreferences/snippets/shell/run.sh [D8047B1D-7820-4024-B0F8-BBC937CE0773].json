@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "#!\/bin\/sh\napp=\"app\/main.go\"\n\nif [ $1 == \"r\" ]\nthen  \n    echo \"theR\"  \nelif [ $1 == \"b\" ]\nthen\n    echo \"theb\"  \nelse\n    echo \"情输入参数 r=运行 b=编译 bl=linux编译\"\nfi\n\n",
+    "uid" : "D8047B1D-7820-4024-B0F8-BBC937CE0773",
+    "name" : "run.sh",
+    "keyword" : ""
+  }
+}

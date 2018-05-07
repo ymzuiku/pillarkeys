@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>098D0866-FCA6-4FE6-A371-47DE382319E7</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>pexels</string>
+			<key>text</key>
+			<string>pexels.com 搜索</string>
+			<key>url</key>
+			<string>https://www.pexels.com/?s={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>61EF2265-CC14-4159-BE31-63095A85E844</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>3</string>
+			<key>text</key>
+			<string>360搜索</string>
+			<key>url</key>
+			<string>https://www.so.com/s?ie={inputEncoding}&amp;q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>69D35CCA-33D4-4081-8735-0894FBB75B60</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>npm</string>
+			<key>text</key>
+			<string>npm 搜索</string>
+			<key>url</key>
+			<string>https://www.npmjs.com/search?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>9E81AAE3-6B8A-4920-B9DD-72528FBFC005</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>b</string>
+			<key>text</key>
+			<string>baidu.com 搜索</string>
+			<key>url</key>
+			<string>http://www.baidu.com/s?wd={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>E53E1361-1DDE-450B-B7E4-B24313949CBF</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>alexa.cn</string>
+			<key>text</key>
+			<string>alexa.cn 网站情况搜索</string>
+			<key>url</key>
+			<string>http://www.alexa.cn/home/index/query?domain={query}&amp;type=whole&amp;type=whole</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>F057C7D6-7BFC-4FD4-BD3B-7953F5169483</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>git</string>
+			<key>text</key>
+			<string>github 搜索</string>
+			<key>url</key>
+			<string>https://github.com/search?q={query}&amp;ref=opensearch</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

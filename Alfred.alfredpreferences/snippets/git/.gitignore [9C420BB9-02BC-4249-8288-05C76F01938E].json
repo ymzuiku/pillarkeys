@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "# gitignore\n\n**\/.git-\n**\/.git--\n**\/node_modules\/**\n**\/build\/**\n**\/design\/**\n**\/target\/**\n**\/.setting\/**\n**\/.vscode\/**\n**\/dist\/**\n**\/.cache\/**\n\/logs\n\/dist\n\/.cache\n\/.public\n.DS_Store\n.yarn-error.log\n.yarn.lock\nnohup.out\n\n\n**\/.DS_Store\n**\/.yarn-error.log\n**\/.yarn.lock\n**\/nohup.out\n**\/*.class\n",
+    "uid" : "9C420BB9-02BC-4249-8288-05C76F01938E",
+    "name" : ".gitignore",
+    "keyword" : ""
+  }
+}

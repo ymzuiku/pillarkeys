@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "eslint --init && yad babel-eslint prettier-eslint",
+    "uid" : "79C68A9A-4827-48D0-B287-BB030C363B99",
+    "name" : "eslint --init",
+    "keyword" : ""
+  }
+}

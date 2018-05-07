@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class FlexCanvas : MonoBehaviour\n{\n    public bool isUpdate = false;\n    public bool horizontal = false;\n    public float designWidth = 640f;\n    public float designHeight = 1136f;\n    public float scale = 1;\n\n    Canvas canvas;\n    void Start()\n    {\n        canvas = this.GetComponent<Canvas>();\n        runFixScaleFactor();\n    }\n    void runFixScaleFactor()\n    {\n        if (horizontal)\n        {\n            float dp = designHeight \/ designWidth;\n            float sp = (float)Screen.height \/ (float)Screen.width;\n            fixScaleFactor(designHeight, Screen.height, dp, sp);\n        }\n        else\n        {\n            float dp = designWidth \/ designHeight;\n            float sp = (float)Screen.width \/ (float)Screen.height;\n            fixScaleFactor(designWidth, Screen.width, dp, sp);\n        }\n    }\n    void fixScaleFactor(float design, float screen, float dp, float sp)\n    {\n        \/\/ 画布缩放比例\n        if (design < screen)\n        {\n            scale = dp * design \/ screen;\n        }\n        else\n        {\n            scale = dp * screen \/ design;\n        }\n        canvas.scaleFactor = scale;\n    }\n\n    \/\/ test\n    void Update()\n    {\n        if (isUpdate)\n        {\n            runFixScaleFactor();\n        }\n    }\n}",
+    "uid" : "0491D3C7-0B1B-429A-9D69-B792CEE84516",
+    "name" : "FlexCanvas.cs",
+    "keyword" : ""
+  }
+}

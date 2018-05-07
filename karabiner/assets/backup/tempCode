@@ -1,0 +1,8 @@
+"conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.unity3d.UnityEditor5.x"
+              ]
+            }
+          ],

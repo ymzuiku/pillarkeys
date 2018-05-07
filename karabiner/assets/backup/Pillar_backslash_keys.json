@@ -1,0 +1,34 @@
+{
+  "title": "Pillar backslash 热键修改",
+  "rules": [
+    {
+      "description": "Pillar backslash option+backslash=backslash",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "backslash"
+          },
+          "to": [
+            {
+              "key_code": "backslash",
+              "modifiers": ["right_control", "right_shift"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "backslash",
+            "modifiers": ["option"]
+          },
+          "to": [
+            {
+              "key_code": "backslash"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

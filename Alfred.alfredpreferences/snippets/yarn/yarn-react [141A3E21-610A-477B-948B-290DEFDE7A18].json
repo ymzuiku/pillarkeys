@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "ya mobx mobx-react react-motion react-router-dom lodash react-virtualized && @types\/mobx @types\/mobx-react @types\/react-motion @types\/react-router-dom @types\/lodash @types\/react-virtualized",
+    "uid" : "141A3E21-610A-477B-948B-290DEFDE7A18",
+    "name" : "yarn-react",
+    "keyword" : ""
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "import React, { PureComponent } from 'react';\nimport { connect } from 'react-redux';\nimport PropTypes from 'prop-types';\nimport { bindActionCreators } from 'redux';\nimport withStyles from '@blankapp\/ui\/src\/withStyles';\nimport { TextInput } from '..\/..\/components';\nimport { setNote } from '..\/..\/redux\/actions\/shoppingCart';\nimport Lang from '..\/..\/utilities\/Lang';\n\nclass OrderConfirmSetNote extends PureComponent {\n  handleNoteChange = (event) => {\n    this.note = event.nativeEvent.text;\n  };\n  render() {\n    \/* eslint no-shadow:0 *\/\n    const {setNote, ...rest} = this.props\n    return (\n      <TextInput\n        autoCapitalize=\"none\"\n        placeholder={Lang.screens.orderConfirm.writeDownYourNote}\n        autoCorrect={false}\n        onChange={this.handleNoteChange}\n        onBlur={this.handleSetNote}\n        {...rest}\n      \/>\n    );\n  }\n}\n\nOrderConfirmSetNote.propTypes = {\n  setNote: PropTypes.func,\n};\n\n\/* eslint no-unused-vars:0 *\/\nfunction mapStateToProps(state, ownProps) {\n  return {};\n}\n\nfunction mapDispatchToProps(dispatch) {\n  return {\n    setNote: bindActionCreators(setNote, dispatch),\n  };\n}\n\nexport default withStyles('OrderConfirmSetNote')(connect(mapStateToProps, mapDispatchToProps)(OrderConfirmSetNote));\n",
+    "uid" : "AD15C87C-32A1-4018-98F9-1D4DAAE3AC9F",
+    "name" : "bindo-react",
+    "keyword" : ""
+  }
+}

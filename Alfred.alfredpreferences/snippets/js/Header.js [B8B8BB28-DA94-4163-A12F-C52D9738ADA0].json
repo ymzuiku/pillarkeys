@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "import Head from 'next\/head';\nimport '..\/css\/styles.scss';\n\nlet lastSuffixTitle = undefined;\nlet lastTitle = undefined;\nlet lastColor = '#fff';\n\nconst Header = ({ title, suffixTitle, color }) => {\n  lastSuffixTitle = suffixTitle || lastSuffixTitle;\n  lastTitle = title || lastTitle;\n  lastColor = color || lastColor;\n  return (\n    <Head>\n      <meta\n        name=\"viewport\"\n        content=\"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover\"\n      \/>\n      <meta name=\"theme-color\" content={lastColor} \/>\n      <title>\n        {lastTitle}\n        {lastSuffixTitle ? '-' + lastSuffixTitle : ''}\n      <\/title>\n      <link rel=\"stylesheet\" href=\"_next\/static\/style.css\" \/>\n    <\/Head>\n  );\n};\n\nexport default Header;\n",
+    "uid" : "B8B8BB28-DA94-4163-A12F-C52D9738ADA0",
+    "name" : "Header.js",
+    "keyword" : ""
+  }
+}

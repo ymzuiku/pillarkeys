@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "-Xms2048m\n-Xmx4096m\n-XX:ReservedCodeCacheSize=512m\n-server\n-XX:+UseParNewGC\n-javaagent:.\/JetbrainsCrack-2.7.jar",
+    "uid" : "9739644E-636B-47CA-B1B0-40F72DC85CA8",
+    "name" : "idea.vmoptions",
+    "keyword" : ""
+  }
+}

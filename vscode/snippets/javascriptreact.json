@@ -1,0 +1,722 @@
+{
+  "TODO:": {
+    "prefix": "TODO:",
+    "body": [
+      "// TODO: "
+    ],
+    "description": "TODO:"
+  },
+  "FIXME:": {
+    "prefix": "FIXME:",
+    "body": [
+      "// FIXME: "
+    ],
+    "description": "FIXME:"
+  },
+  "for-i-l++": {
+    "prefix": "for-i-l++",
+    "body": [
+      "for (let i = 0, l = $1.length; i < l; i++) {",
+      "  const v = $1[i];",
+      "}"
+    ],
+    "description": "for-i-l++"
+  },
+  "for-a-b++": {
+    "prefix": "for-a-b++",
+    "body": [
+      "for (let $1 = 0, $2 = $3.length; $1 < $2; $1++) {",
+      "  const v = $3[$1];",
+      "}"
+    ],
+    "description": "for-a-b++"
+  },
+  "throttle": {
+    "prefix": "throttle",
+    "body": [
+      "const throttleFunc = _.throttle(() => {}, 1000, { leading: true, trailing: false });"
+    ],
+    "description": "throttle"
+  },
+  "console.log($1)": {
+    "prefix": "log",
+    "body": [
+      "console.log($1)"
+    ],
+    "description": "console.log($1)"
+  },
+  "egg-app": {
+    "prefix": "egg-app",
+    "body": [
+      "let { \\$app } = require('egg-imports')",
+      "module.exports = (app = \\$app) => {}"
+    ],
+    "description": "egg-app"
+  },
+  "module.exports = ": {
+    "prefix": "mexp",
+    "body": [
+      "module.exports = "
+    ],
+    "description": "module.exports = "
+  },
+  "egg-route": {
+    "prefix": "egg-route",
+    "body": [
+      "const { \\$app } = require('egg-imports')",
+      "module.exports = (app = \\$app) => {",
+      "const { router, controller, io} = app",
+      "// static",
+      "router.redirect('/', '/public/web/index.html', 302)",
+      "router.redirect('/web', '/public/web/index.html', 302)",
+      "",
+      "// http",
+      "router.get('/home/index', controller.home.index)",
+      "",
+      "// socket",
+      "io.route('chat', io.controller.chat.index)",
+      "}"
+    ],
+    "description": "egg-route"
+  },
+  "egg-controller": {
+    "prefix": "egg-controller",
+    "body": [
+      "const { Controller } = require('egg-imports')",
+      "module.exports = class extends Controller {",
+      "async index() {",
+      "// const data = this.ctx.args[0]  // 使用读取io数据",
+      "// let result = await this.ctx.service.user.reg()  // 使用server",
+      "// this.ctx.socket.emit('res', 'bbb')  //使用socket.emit回传数据",
+      "// this.ctx.body = 'hi, egg'  //使用body回传数据",
+      "}",
+      "}"
+    ],
+    "description": "egg-controller"
+  },
+  "egg-server": {
+    "prefix": "egg-server",
+    "body": [
+      "const { \\$db, Service } = require('egg-imports')",
+      "module.exports = class extends Service {",
+      "async insertOne() {",
+      "let db = \\$db; db = this.app.mongodb;",
+      "let User = db.collection('user')",
+      "let rs;",
+      "try {",
+      "let info = await User.insertOne({",
+      "name: 'zhang san',",
+      "phone: '177xxxxxxxx'",
+      "});",
+      "this.app.logger.log(info);",
+      "rs = {",
+      "code: '0',",
+      "content: 'user register ok'",
+      "}",
+      "} catch (e) {",
+      "this.app.logger.error(e && e.stack);",
+      "",
+      "rs = {",
+      "code: '-1',",
+      "content: e.message || 'unknown error'",
+      "}",
+      "}",
+      "",
+      "return rs;",
+      "}",
+      "}"
+    ],
+    "description": "egg-server"
+  },
+  "egg-config-static": {
+    "prefix": "egg-config-static",
+    "body": [
+      "config.static = {",
+      "prefix: '/',",
+      "dir: path.join(appInfo.baseDir, 'public/'),",
+      "dynamic: true,",
+      "preload: false,",
+      "buffer: false, // 是否缓冲",
+      "maxFiles: 5000,",
+      "}"
+    ],
+    "description": "egg-config-static"
+  },
+  "egg-config-io": {
+    "prefix": "egg-config-io",
+    "body": [
+      "exports.io = {",
+      "init: { wsEngine: 'uws' },",
+      "}"
+    ],
+    "description": "egg-config-io"
+  },
+  "egg-config-mongo": {
+    "prefix": "egg-config-mongo",
+    "body": [
+      "exports.mongodb = {",
+      "app: true,",
+      "agent: false,",
+      "username: '',",
+      "password: '',",
+      "host: '127.0.0.1',",
+      "port: '27017',",
+      "db: 'test',",
+      "query: '',",
+      "}"
+    ],
+    "description": "egg-config-mongo"
+  },
+  "egg-plugin": {
+    "prefix": "egg-plugin",
+    "body": [
+      "exports.io = {",
+      "enable: true,",
+      "package: 'egg-socket.io'",
+      "}",
+      "",
+      "exports.mongodb = {",
+      "enable:true,",
+      "package:'egg-mongodb'",
+      "}"
+    ],
+    "description": "egg-plugin"
+  },
+  "promise": {
+    "prefix": "promise",
+    "body": [
+      "new Promise(succ => {}",
+    ],
+    "description": "promise"
+  },
+  "q-dev": {
+    "prefix": "q-dev",
+    "body": [
+      "var dev = process.env.NODE_ENV==='development'"
+    ],
+    "description": "q-dev"
+  },
+  "q-prod": {
+    "prefix": "q-prod",
+    "body": [
+      "process.env.NODE_ENV === 'production'"
+    ],
+    "description": "q-prod"
+  },
+  "const=require": {
+    "prefix": "const=require",
+    "body": [
+      "const $2 = require('$1');"
+    ],
+    "description": "const=require"
+  },
+  "import-meteor": {
+    "prefix": "import-meteor",
+    "body": [
+      "import { Meteor } from 'meteor/meteor';"
+    ],
+    "description": "import-meteor"
+  },
+  "import-meteor-withTracker": {
+    "prefix": "import-meteor-withTracker",
+    "body": [
+      "import { withTracker } from 'meteor/react-meteor-data';"
+    ],
+    "description": "import-meteor-withTracker"
+  },
+  "import-meteor-mongo": {
+    "prefix": "import-meteor-mongo",
+    "body": [
+      "import { Mongo } from 'meteor/mongo';"
+    ],
+    "description": "import-meteor-mongo"
+  },
+  "import-meteor-check": {
+    "prefix": "import-meteor-check",
+    "body": [
+      "import { check } from 'meteor/check';"
+    ],
+    "description": "import-meteor-check"
+  },
+  "afn": {
+    "prefix": "afm",
+    "body": [
+      "$1 => $2"
+    ],
+    "description": "x => x"
+  },
+  "af": {
+    "prefix": "af",
+    "body": [
+      "($1) => {}"
+    ],
+    "description": "() => {}"
+  },
+  "class-react-pureComponent": {
+    "prefix": "class-react-pureCompent",
+    "body": [
+      "class $1 extends PureComponent {",
+      "  render() {",
+      "    return (",
+      "      ",
+      "    );",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "class-react-pureComponent"
+  },
+  "import-ramda": {
+    "prefix": "import-ramda",
+    "body": [
+      "import R from 'ramda';",
+    ],
+    "description": "import-ramda"
+  },
+  "import-react": {
+    "prefix": "import-react",
+    "body": [
+      "import React, { PureComponent } from 'react';",
+    ],
+    "description": "import-react"
+  },
+  "import-react-native": {
+    "prefix": "import-react-native",
+    "body": [
+      "import {",
+      "  View,",
+      "  Text,",
+      "} from 'react-native';"
+    ],
+    "description": "import-react-native"
+  },
+  "import-prop-types": {
+    "prefix": "import-prop-types",
+    "body": [
+      "import PropTypes from 'prop-types';",
+    ],
+    "description": "import-prop-types"
+  },
+  "Comp.propTypes={};": {
+    "prefix": "Comp.propTypes={};",
+    "body": [
+      "$1.propTypes = {",
+      "  ",
+      "};"
+    ],
+    "description": "Comp.propTypes={};"
+  },
+  "static-defalutProps": {
+    "prefix": "static-defalutProps",
+    "body": [
+      "static defaultProps = {",
+      "  $1",
+      "}"
+    ],
+    "description": "static-defalutProps"
+  },
+  "import-react-dom-render": {
+    "prefix": "import-react-dom-render",
+    "body": [
+      "import { render } from 'react-dom';"
+    ],
+    "description": "import-react-dom-render"
+  },
+  "import-react-dom-findDOMNode": {
+    "prefix": "import-react-dom-findDOMNode",
+    "body": [
+      "import { findDOMNode } from 'react-dom';"
+    ],
+    "description": "import-react-dom-findDOMNode"
+  },
+  "func-event-preventDefault": {
+    "prefix": "func-event-preventDefault",
+    "body": [
+      "$1 = (event) => {",
+      "  event.preventDefault();",
+      "}"
+    ],
+    "description": "func-event-preventDefault"
+  },
+  "type-props": {
+    "prefix": "type-props",
+    "body": [
+      "type Props = {",
+      "  style?:React.CSSProperties,",
+      "  children?:React.ReactInstance,",
+      "}",
+    ],
+    "description": "type-props"
+  },
+  "this.props.": {
+    "prefix": "tp",
+    "body": [
+      "this.props."
+    ],
+    "description": "this.props."
+  },
+  "this.state.": {
+    "prefix": "ts",
+    "body": [
+      "this.state."
+    ],
+    "description": "this.state."
+  },
+  "this.setState()": {
+    "prefix": "tss",
+    "body": [
+      "this.setState();"
+    ],
+    "description": "this.setState()"
+  },
+  "eslint-disable-next-line":{
+    "prefix": "eslint-disable-next-line",
+    "body": "// eslint-disable-next-line",
+  },
+  "/* eslint no-unused-vars:0 */": {
+    "prefix": "eslint no-unused-vars:0",
+    "body": [
+      "/* eslint no-unused-vars:0 */"
+    ],
+    "description": "/* eslint no-unused-vars:0 */"
+  },
+  "/* eslint prefer-const:0 */": {
+    "prefix": "eslint prefer-const:0",
+    "body": [
+      "/* eslint prefer-const:0 */"
+    ],
+    "description": "/* eslint prefer-const:0 */"
+  },
+  "eslint-disable": {
+    "prefix": "eslint-disable",
+    "body": [
+      "/* eslint-disable */"
+    ],
+    "description": "eslint-disable"
+  },
+  "/* eslint global-require:0 */": {
+    "prefix": "eslint global-require:0",
+    "body": [
+      "/* eslint global-require:0 */"
+    ],
+    "description": "/* eslint global-require:0 */"
+  },
+  "eslint-no-export": {
+    "prefix": "eslint-no-export",
+    "body": [
+      "/* eslint import/prefer-default-export:0 */"
+    ],
+    "description": "eslint-no-export"
+  },
+  "eslint-react/prefer-stateless-function": {
+    "prefix": "eslint-react/prefer-stateless-function",
+    "body": [
+      "/* eslint react/prefer-stateless-function:0 */"
+    ],
+    "description": "eslint-react/prefer-stateless-function"
+  },
+  "eslint-no-console": {
+    "prefix": "eslint-no-console",
+    "body": [
+      "/* eslint no-console:0 */"
+    ],
+    "description": "eslint-no-console"
+  },
+  "constructor-super(props)": {
+    "prefix": "constructor-super(props)",
+    "body": [
+      "constructor(props){",
+      "  super(props);",
+      "}"
+    ],
+    "description": "constructor-super(props)"
+  },
+  "export-as-defalut": {
+    "prefix": "export-as-defalut",
+    "body": [
+      "export {",
+      "  $1 as default,",
+      "  $1,",
+      "};",
+      ""
+    ],
+    "description": "export-as-defalut"
+  },
+  "this.props.navigation": {
+    "prefix": "this.props.navigation",
+    "body": [
+      "this.props.navigation",
+    ],
+    "description": "this.props.navigation"
+  },
+  "this.props.navigation.navigate()": {
+    "prefix": "this.props.navigation.navigate()",
+    "body": [
+      "this.props.navigation.navigate('Details')"
+    ],
+    "description": "this.props.navigation.navigate()"
+  },
+  "const { params } = this.props.navigation.state;": {
+    "prefix": "const { params } = this.props.navigation.state;",
+    "body": [
+      "const { params = {} } = this.props.navigation.state;"
+    ],
+    "description": "const { params } = this.props.navigation.state;"
+  },
+  "this.props.navigation.setParams()": {
+    "prefix": "this.props.navigation.setParams()",
+    "body": [
+      "this.props.navigation.setParams()"
+    ],
+    "description": "this.props.navigation.setParams()"
+  },
+  "componentDidMount() {}": {
+    "prefix": "componentDidMount() {}",
+    "body": [
+      "componentDidMount() {}",
+    ],
+    "description": "componentDidMount() {}"
+  },
+  "componentWillMount() {}": {
+    "prefix": "componentWillMount() {}",
+    "body": [
+      "componentWillMount() {}",
+    ],
+    "description": "componentWillMount() {}"
+  },
+  "componentWillReceiveProps(nextProps) {}": {
+    "prefix": "componentWillReceiveProps(nextProps) {}",
+    "body": [
+      "componentWillReceiveProps(nextProps) {",
+      "  return nextProps;",
+      "}"
+    ],
+    "description": "componentWillReceiveProps(nextProps) {}"
+  },
+  "shouldComponentUpdate(nextProps, nextState) {}": {
+    "prefix": "shouldComponentUpdate(nextProps, nextState) {}",
+    "body": [
+      "shouldComponentUpdate(nextProps, nextState) {",
+      "  return true",
+      "}"
+    ],
+    "description": "shouldComponentUpdate(nextProps, nextState) {}"
+  },
+  "componentWillUnmount() {}": {
+    "prefix": "componentWillUnmount() {}",
+    "body": [
+      "componentWillUnmount() {}",
+    ],
+    "description": "componentWillUnmount() {}"
+  },
+  "componentWillUpdate() {}": {
+    "prefix": "componentWillUpdate() {}",
+    "body": [
+      "componentWillUpdate() {}",
+    ],
+    "description": "componentWillUpdate() {}"
+  },
+  "componentDidUpdate() {}": {
+    "prefix": "componentDidUpdate() {}",
+    "body": [
+      "componentDidUpdate() {}",
+    ],
+    "description": "componentDidUpdate() {}"
+  },
+  "static navigationOptions={}": {
+    "prefix": "static navigationOptions={}",
+    "body": [
+      "static navigationOptions = ({ navigation }) => {",
+      "  const { params = {} } = navigation.state;",
+      "  return {",
+      "    title: 'home',",
+      "    gesturesEnabled: true,",
+      "    headerStyle: {",
+      "      backgroundColor: '#55f',",
+      "    },",
+      "    headerTintColor: '#fff',",
+      "    headerTitleStyle: {",
+      "      fontWeight: 'bold',",
+      "    },",
+      "    ...params,",
+      "  };",
+      "};"
+    ],
+    "description": "static navigationOptions={}"
+  },
+  "backgroundColor": {
+    "prefix": "backgroundColor",
+    "body": [
+      "backgroundColor"
+    ],
+    "description": "backgroundColor"
+  },
+  "flexDirection:'column'": {
+    "prefix": "flexDirection:'column'",
+    "body": [
+      "flexDirection:'column'"
+    ],
+    "description": "flexDirection:'column'"
+  },
+  "flexDirection: 'row',": {
+    "prefix": "flexDirection: 'row',",
+    "body": [
+      "flexDirection: 'row',"
+    ],
+    "description": "flexDirection: 'row',"
+  },
+  "fontWeight": {
+    "prefix": "fontWeight",
+    "body": [
+      "fontWeight"
+    ],
+    "description": "fontWeight"
+  },
+  "transform": {
+    "prefix": "transform",
+    "body": [
+      "transform"
+    ],
+    "description": "transform"
+  },
+  "justifyContent:'space-between'": {
+    "prefix": "justifyContent:'space-between'",
+    "body": [
+      "justifyContent:'space-between'"
+    ],
+    "description": "justifyContent:'space-between'"
+  },
+  "alignItems": {
+    "prefix": "alignItems",
+    "body": [
+      "alignItems"
+    ],
+    "description": "alignItems"
+  },
+  "pointerEvents:'none'": {
+    "prefix": "pointerEvents:'none'",
+    "body": [
+      "pointerEvents:'none'"
+    ],
+    "description": "pointerEvents:'none'"
+  },
+  "position:'absolute'": {
+    "prefix": "position:'absolute'",
+    "body": [
+      "position:'absolute'"
+    ],
+    "description": "position:'absolute'"
+  },
+  "position: 'relative',": {
+    "prefix": "position: 'relative',",
+    "body": [
+      "position: 'relative',"
+    ],
+    "description": "position: 'relative',"
+  },
+  "position: 'fixed',": {
+    "prefix": "position: 'fixed',",
+    "body": [
+      "position: 'fixed',"
+    ],
+    "description": "position: 'fixed',"
+  },
+  "borderRadius": {
+    "prefix": "borderRadius",
+    "body": [
+      "borderRadius"
+    ],
+    "description": "borderRadius"
+  },
+  "import { connect } from 'react-redux';": {
+    "prefix": "import-react-redux';",
+    "body": [
+      "import { connect } from 'react-redux';"
+    ],
+    "description": "import { connect } from 'react-redux';"
+  },
+  "func mapStateToProps": {
+    "prefix": "func mapStateToProps",
+    "body": [
+      "function mapStateToProps(state, ownProps) {",
+      "  return {",
+      "    active: ownProps.filter === state.visibilityFilter",
+      "  };",
+      "};"
+    ],
+    "description": "func mapStateToProps"
+  },
+  "func mapDispatchToProps": {
+    "prefix": "func mapDispatchToProps",
+    "body": [
+      "function mapDispatchToProps(dispatch, ownProps) {",
+      "  return {",
+      "    onClick: () => {",
+      "      dispatch(setVisibilityFilter(ownProps.filter));",
+      "    }",
+      "  };",
+      "};",
+    ],
+    "description": "func mapDispatchToProps"
+  },
+  "connect": {
+    "prefix": "connect",
+    "body": [
+      "connect(",
+      "  mapStateToProps,",
+      "  mapDispatchToProps,",
+      ")($1)"
+    ],
+    "description": "connect"
+  },
+  "next-goPath": {
+    "prefix": "next-goPath",
+    "body": [
+      "const goPath = () => {",
+      "  Router.push({",
+      "    pathname: '/',",
+      "    query: {}",
+      "  });",
+      "};"
+    ],
+    "description": "next-goPath"
+  },
+  "delay-async-await": {
+    "prefix": "delay-async-await",
+    "body": [
+      "const delay = async () => {}",
+      "delay();",
+    ],
+    "description": "delay-async-await"
+  },
+  "createStore-thunk-devtool": {
+    "prefix": "createStore-thunk-devtool",
+    "body": [
+      "import { createStore, applyMiddleware } from 'redux'",
+      "import { composeWithDevTools } from 'redux-devtools-extension'",
+      "import thunkMiddleware from 'redux-thunk'",
+      "",
+      "export const initStore = (defState = defState) => {",
+      "  return createStore(reducer, defState, composeWithDevTools(applyMiddleware(thunkMiddleware)))",
+      "}"
+    ],
+    "description": "createStore-thunk-devtool"
+  },
+  "new-react-redux": {
+    "prefix": "new-react-redux",
+    "body": [
+      "import React from 'react'",
+      "import { initState, actions, fr } from '../src/flow';",
+      "",
+      "export default fr.wr(maps, mapd)(() => <div></div>);",
+      "",
+      "function maps(state = initState) {",
+      "  return {};",
+      "}",
+      "function mapd(dispatch) {",
+      "  return {};",
+      "}",
+    ],
+    "description": "new-react-redux"
+  },
+}

@@ -1,0 +1,25 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "Rough",
+      "identifier": "my-command-identifier",
+      "script": "my-command.js"
+    }
+  ],
+  "menu": {
+    "isRoot": true,
+    "items": [
+      "my-command-identifier"
+    ]
+  },
+  "version": "0.1.4",
+  "description": "Transform your shapes in a sketchy, scribbly, hand-drawn-like, style.",
+  "name": "Rough",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com/mathieudutour/rough-sketch/master/.appcast.xml",
+  "author": "mathieudutour",
+  "authorEmail": "mathieu@dutour.me"
+}

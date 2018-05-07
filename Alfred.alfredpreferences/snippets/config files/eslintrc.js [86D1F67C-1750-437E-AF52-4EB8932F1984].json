@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "module.exports = {\n  extends: 'airbnb',\n  parser: 'babel-eslint',\n  globals: {\n    __DEV__: true,\n  },\n  env: {\n    jest: true,\n    browser: true,\n  },\n  plugins: ['prettier'],\n  rules: {\n    'no-alert': 0,\n    'class-methods-use-this': 0,\n    'import\/prefer-default-export':0,\n    'prefer-destructuring': ['error', { object: false, array: false }],\n    'react\/prefer-stateless-function':0,\n    'react\/forbid-prop-types': [2, { forbid: ['any'] }],\n    'react\/require-default-props': 0,\n    'arrow-body-style': 0,\n    'react\/prop-types': [2, { ignore: ['navigation'], customValidators: [] }],\n    'react\/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],\n  },\n};\n",
+    "uid" : "86D1F67C-1750-437E-AF52-4EB8932F1984",
+    "name" : "eslintrc.js",
+    "keyword" : ""
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "title": "Pillar Affinity Design key",
+  "rules": [
+    {
+      "description": "Pillar Affinity Design key",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to_if_held_down": [
+            {
+              "pointing_button": "button3"
+            }
+          ],
+          "to": [
+            {
+              "key_code": "spacebar"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com.seriflabs.affinitydesigner"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "z",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to_if_held_down": [
+            {
+              "key_code": "a"
+            },
+            {
+              "key_code": "z"
+            },
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "to": [
+            {
+              "key_code": "z"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com.seriflabs.affinitydesigner"]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "yarn add --dev @types\/react @types\/react-dom @types\/react-native @types\/lodash @types\/react-navigation @types\/react-router @types\/react-router-dom @types\/express @types\/jquery @types\/redux @types\/react-redux @types\/koa @types\/react-motion @types\/koa-router",
+    "uid" : "DFBD83CF-8F57-4EFC-A9BE-DFD85C0AD317",
+    "name" : "yarn add @types",
+    "keyword" : ""
+  }
+}

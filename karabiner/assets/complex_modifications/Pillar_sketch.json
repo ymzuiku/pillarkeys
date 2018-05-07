@@ -1,0 +1,97 @@
+{
+    "title": "Pillar Sketch key",
+    "rules": [
+      {
+        "description": "Pillar Sketch key",
+        "manipulators": [
+          {
+            "from": {
+              "key_code": "spacebar",
+              "modifiers": {
+                "optional": ["any"]
+              }
+            },
+            "to_if_held_down": [
+              {
+                "pointing_button": "button3"
+              }
+            ],
+            "to": [
+              {
+                "key_code": "spacebar"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "frontmost_application_if",
+                "bundle_identifiers": ["^com.bohemiancoding.sketch3"]
+              }
+            ],
+            "type": "basic"
+          },
+          {
+            "from": {
+              "key_code": "z",
+              "modifiers": {
+                "optional": ["any"]
+              }
+            },
+            "to_if_held_down": [
+              {
+                "key_code": "z"
+              }
+            ],
+            "to_after_key_up": [
+              {
+                "key_code": "escape"
+              }
+            ],
+            "to": [
+              {
+                "key_code": "z"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "frontmost_application_if",
+                "bundle_identifiers": ["^com.bohemiancoding.sketch3"]
+              }
+            ],
+            "type": "basic"
+          },
+          {
+            "from": {
+              "key_code": "z",
+              "modifiers": {
+                "optional": ["any"]
+              }
+            },
+            "to_if_held_down": [
+              {
+                "pointing_button": "button1"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "frontmost_application_if",
+                "bundle_identifiers": ["^com.bohemiancoding.sketch3"]
+              }
+            ],
+            "type": "basic"
+          },
+          {
+            "from": {
+              "key_code": "grave_accent_and_tilde"
+            },
+            "to": [
+              {
+                "key_code": "delete_or_backspace"
+              }
+            ],
+            "type": "basic"
+          }
+        ]
+      }
+    ]
+  }
+  

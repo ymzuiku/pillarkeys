@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "import 'package:flutter\/material.dart';\n\nclass Iconfont extends StatelessWidget {\n  final int codePoint;\n  final String fontFamily;\n  final Color color;\n  final int hex;\n  final String name;\n  final double size;\n\n  static data(int codePoint, { String fontFamily = 'iconfont' }) {\n    return IconData(codePoint, fontFamily: fontFamily);\n  }\n\n  Iconfont(this.codePoint,\n      {this.name='', this.color = const Color(0xFFFF0000), this.fontFamily='iconfont', this.size, this.hex=0xFFFF0000})\n\n  @override\n  Widget build(BuildContext context) {\n    return new Icon(Iconfont.data(codePoint, fontFamily: fontFamily), color: hex != null ? new Color(hex) :color, size: size,);\n  }\n}",
+    "uid" : "25138BC9-734C-42F9-9306-A9B4B92872D3",
+    "name" : "iconfont",
+    "keyword" : ""
+  }
+}

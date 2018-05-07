@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "function host() {\n  var interfaces = require('os').networkInterfaces()\n  for (var devName in interfaces) {\n    var iface = interfaces[devName]\n    for (var i = 0; i < iface.length; i++) {\n      var alias = iface[i]\n      if (alias.family === 'IPv4' && alias.address !== '127.0.0.1' && !alias.internal) {\n        return alias.address\n      }\n    }\n  }\n}",
+    "uid" : "523F8626-4A37-40F1-9F39-E4154FB318F5",
+    "name" : "host()",
+    "keyword" : ""
+  }
+}

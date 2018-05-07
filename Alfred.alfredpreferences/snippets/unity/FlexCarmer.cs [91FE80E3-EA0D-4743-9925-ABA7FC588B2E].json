@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class FlexCarmer : MonoBehaviour\n{\n    const float devHeight = 9.6f;\n    const float devWidth = 6.4f;\n    void Start()\n    {\n        \/\/ 获取屏幕高度\n        float screenHeight = Screen.height;\n        Debug.Log(\"screenHeight = \" + screenHeight);\n\n        \/\/ 拿到摄像机正交属性\n        float orthographicSize = this.GetComponent<Camera>().orthographicSize;\n\n        \/\/ 得到屏幕宽高比\n        float aspectRatio = Screen.width * 1.0f \/ Screen.height;\n\n        float CameraWidth = orthographicSize * 2.0f * aspectRatio;\n        Debug.Log(\"cameraWidth = \" + CameraWidth);\n        if (CameraWidth < devWidth)\n        {\n            orthographicSize = devWidth \/ (2.0f * aspectRatio);\n            Debug.Log(\"new orthograhpicSize = ${orthographicSize}\");\n            this.GetComponent<Camera>().orthographicSize = orthographicSize;\n        }\n    }\n}",
+    "uid" : "91FE80E3-EA0D-4743-9925-ABA7FC588B2E",
+    "name" : "FlexCarmer.cs",
+    "keyword" : ""
+  }
+}

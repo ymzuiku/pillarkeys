@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class ShowFPS : MonoBehaviour\n{\n\n    public bool isShowFPS = true;\n    private float updateInterval = 1f; \/\/帧数刷新间隔\n    private double lastInterval;\n    private int frames = 0;\n    private float currFPS;\n\n    void Awake()\n    {\n        Application.targetFrameRate = 60;\n    }\n\n    void Start()\n    {\n        if (!isShowFPS)\n        {\n            return;\n        }\n        lastInterval = Time.realtimeSinceStartup;\n        frames = 0;\n    }\n\n    \/\/ Update is called once per frame\n    void Update()\n    {\n        if (!isShowFPS)\n        {\n            return;\n        }\n        ++frames;\n        float timeNow = Time.realtimeSinceStartup;\n        if (timeNow > lastInterval + updateInterval)\n        {\n            currFPS = (float)(frames \/ (timeNow - lastInterval));\n            frames = 0;\n            lastInterval = timeNow;\n        }\n    }\n\n    void OnGUI()\n    {\n        if (!isShowFPS)\n        {\n            return;\n        }\n        string str = \"FPS:\" + currFPS.ToString(\"f2\");\n        var style = new GUIStyle();\n        style.fontSize = 24;\n        style.normal.textColor = new Color(1, 1, 1);\n        GUI.Label(new Rect(Screen.width - 130, 30, 100, 100), str, style);\n    }\n}\n",
+    "uid" : "EA732C82-F075-40E3-92DC-988BBBF9869A",
+    "name" : "ShowFps.cs",
+    "keyword" : ""
+  }
+}

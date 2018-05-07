@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "backgroundImage: 'url(\/static\/test.png)',\nbackgroundSize: 'contain',\nbackgroundRepeat: 'no-repeat',\nwidth: 100,\nheight: 100,",
+    "uid" : "9B2AF621-95BD-4D71-B45E-A35815DF48E5",
+    "name" : "bgm",
+    "keyword" : ""
+  }
+}

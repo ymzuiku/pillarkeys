@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "import thunkMiddleware from 'redux-thunk';\nimport { createLogger } from 'redux-logger';\nimport { createStore, applyMiddleware } from 'redux';\nimport { Provider } from 'react-redux';\n\nexport function createThunkLoggerStore(theReducer) {\n  const loggerMiddleware = createLogger();\n  return createStore(\n    theReducer,\n    applyMiddleware(\n      thunkMiddleware, \/\/ 允许我们 dispatch() 函数\n      loggerMiddleware \/\/ 一个很便捷的 middleware，用来打印 action 日志\n    )\n  );\n}\n\nexport function createThunkStore(theReducer) {\n  return createStore(\n    theReducer,\n    applyMiddleware(\n      thunkMiddleware \/\/ 允许我们 dispatch() 函数\n    )\n  );\n}\n\nexport {\n  Provider\n}",
+    "uid" : "88882C9B-2A69-4155-8D0F-277295FD151D",
+    "name" : "redux-helper.js",
+    "keyword" : ""
+  }
+}
