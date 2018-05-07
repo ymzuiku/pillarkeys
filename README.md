@@ -2,8 +2,8 @@
 
 ## Document
 
-* [添加显示方式热键](https://github.com/ymzuiku/pillarkeys/wiki/添加显示方式热键)
-* [添加点线面热键](https://github.com/ymzuiku/pillarkeys/wiki/添加点线面热键)
+* [添加显示方式热键](doc/blender/添加显示方式热键.md)
+* [添加点线面热键](doc/blender/添加点线面热键.md)
 
 使用init相关的命令,把可以软链接的项目都链接过去,不可以软链接的需要手动复制
 
