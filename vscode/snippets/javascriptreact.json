@@ -554,7 +554,7 @@
   "flexDirection:'column'": {
     "prefix": "flexDirection:'column'",
     "body": [
-      "flexDirection:'column'"
+      "flexDirection: 'column'"
     ],
     "description": "flexDirection:'column'"
   },
@@ -582,7 +582,7 @@
   "justifyContent:'space-between'": {
     "prefix": "justifyContent:'space-between'",
     "body": [
-      "justifyContent:'space-between'"
+      "justifyContent: 'space-between'"
     ],
     "description": "justifyContent:'space-between'"
   },
@@ -596,16 +596,16 @@
   "pointerEvents:'none'": {
     "prefix": "pointerEvents:'none'",
     "body": [
-      "pointerEvents:'none'"
+      "pointerEvents: 'none'"
     ],
     "description": "pointerEvents:'none'"
   },
   "position:'absolute'": {
-    "prefix": "position:'absolute'",
+    "prefix": "position: 'absolute'",
     "body": [
-      "position:'absolute'"
+      "position: 'absolute'"
     ],
-    "description": "position:'absolute'"
+    "description": "position: 'absolute'"
   },
   "position: 'relative',": {
     "prefix": "position: 'relative',",

@@ -268,7 +268,7 @@
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+alt+w",
+        "key": "ctrl+alt+l",
         "command": "workbench.action.gotoLine"
     },
     {

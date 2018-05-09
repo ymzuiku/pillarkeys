@@ -389,4 +389,21 @@ function -rename(){
     # -rename *.jpg xxx.jpg yyy.jpg (把后缀为jpg的xxx.jpg改为yyy.jpg)
     for var in $1; do mv "$var" "${var%$2}$3"; done
 }
+function -ios(){
+    # 1.首次需要安装 ios-deploy: $ sudo npm i -g ios-deploy --unsafe-perm=true
+    # 2.查看SDK: $ xcodebuild -showsdks
+    if [ $1 == "b" ]
+    then
+        xcodebuild -sdk iphoneos11.3 build
+    elif [ $1 == "r" ]
+    then
+        ios-deploy -d -I --bundle ./build/Release-iphoneos/ProductName.app
+    elif [ $1 == "br" ]
+    then
+        xcodebuild -sdk iphoneos11.3 build
+        ios-deploy -d -I --bundle ./build/Release-iphoneos/ProductName.app
+    else
+        echo "情输入参数 br=编译+运行 b=编译 r=运行"
+    fi
+}
 echo -e "已刷新 .bash_profile"

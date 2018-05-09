@@ -7,11 +7,11 @@
 	<key>hotkey</key>
 	<dict>
 		<key>key</key>
-		<integer>49</integer>
+		<integer>9</integer>
 		<key>mod</key>
-		<integer>524288</integer>
+		<integer>1572864</integer>
 		<key>string</key>
-		<string>Space</string>
+		<string>V</string>
 	</dict>
 	<key>snippetKeyword</key>
 	<string>`</string>

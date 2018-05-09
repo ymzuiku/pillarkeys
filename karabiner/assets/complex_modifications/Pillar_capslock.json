@@ -23,33 +23,11 @@
           ],
           "to_if_alone": [
             {
-              "key_code": "f12",
+              "key_code": "0",
               "modifiers": [
                 "right_shift",
-                "right_option"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "grave_accent_and_tilde",
-            "modifiers": {
-              "mandatory": [
-                "control",
-                "option"
-              ],
-              "optional": [
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "comma",
-              "modifiers": [
-                "right_command"
+                "right_option",
+                "right_ctrl"
               ]
             }
           ],
