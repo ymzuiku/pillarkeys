@@ -168,5 +168,13 @@
   {
     "key": "ctrl+shift+-",
     "command": "-workbench.action.navigateForward"
+  },
+  {
+    "key": "alt+n",
+    "command": "explorer.newFile"
+  },
+  {
+    "key": "alt+m",
+    "command": "explorer.newFolder"
   }
 ]
