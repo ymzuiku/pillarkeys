@@ -47,8 +47,8 @@
           ],
           "conditions": [
             {
-              "type": "variable_if",
               "name": "vimium",
+              "type": "variable_if",
               "value": 1
             }
           ]

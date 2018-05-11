@@ -189,19 +189,17 @@
     ],
     "description": "promise"
   },
-  "q-dev": {
-    "prefix": "q-dev",
+  "isDev": {
+    "prefix": "isDev",
     "body": [
-      "var dev = process.env.NODE_ENV==='development'"
-    ],
-    "description": "q-dev"
+      "const isDev = process.env.NODE_ENV==='development'"
+    ]
   },
-  "q-prod": {
-    "prefix": "q-prod",
+  "isProd": {
+    "prefix": "isProd",
     "body": [
-      "process.env.NODE_ENV === 'production'"
-    ],
-    "description": "q-prod"
+      "const isProd = process.env.NODE_ENV==='production'"
+    ]
   },
   "const=require": {
     "prefix": "const=require",

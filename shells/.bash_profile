@@ -371,6 +371,9 @@ function -osx-defaults(){
     killall Finder;
 }
 function -keyboard(){
+    defaults write NSGlobalDomain KeyRepeat -int 1
+    defaults write NSGlobalDomain InitialKeyRepeat -int 18
+    defaults write -g ApplePressAndHoldEnabled -bool false
     defaults write -g ApplePressAndHoldEnabled -bool false;
     killall Dock;
     killall Finder;
