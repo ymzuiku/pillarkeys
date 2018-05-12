@@ -1933,12 +1933,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f2",
-                                        "modifiers": [
-                                            "right_option",
-                                            "right_shift",
-                                            "right_command"
-                                        ]
+                                        "key_code": "mission_control"
                                     }
                                 ],
                                 "type": "basic"
@@ -1957,10 +1952,8 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f3",
+                                        "key_code": "q",
                                         "modifiers": [
-                                            "right_option",
-                                            "right_shift",
                                             "right_command"
                                         ]
                                     }
