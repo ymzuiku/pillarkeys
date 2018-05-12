@@ -176,5 +176,17 @@
   {
     "key": "alt+m",
     "command": "explorer.newFolder"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "workbench.action.terminal.openNativeConsole"
+  },
+  {
+    "key": "ctrl+shift+alt+e",
+    "command": "workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "workbench.action.openRecent"
   }
 ]

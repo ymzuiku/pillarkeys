@@ -24,7 +24,12 @@
           ],
           "to_if_alone": [
             {
-              "key_code": "caps_lock"
+              "key_code": "f12",
+              "modifiers": [
+                "right_control",
+                "right_option",
+                "right_shift"
+              ]
             }
           ],
           "to_after_key_up": [
