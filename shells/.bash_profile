@@ -19,11 +19,12 @@ export PATH=$PATH:$TOMCAT_HOME/bin
 export PATH=$PATH:/opt/java/gradle/gradle-bin/bin
 
 # export PATH=~/.config/yarn/global/node_modules/.bin
-export PATH=$PATH:$HOME/.yarn/bin
+# export PATH=$PATH:$HOME/.yarn/bin
 
 export GOROOT=/usr/local/go
 export GOPATH=/go
 export PATH=$PATH:$GOPATH/bin
+export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 
 #查看所有alias
 alias alias-all='cat ~/.bash_profile | grep "alias "'
@@ -43,17 +44,19 @@ alias mvn-init='mvn archetype:generate -DarchetypeCatalog=internal'
 alias mvn-install='mvn clean install'
 
 
+# save-仅仅为了记录命令
+alias ...du='du -sh ' #查看文件夹大小
+alias ...tar='tar -cvf' #压缩tar
+alias ...tar-un='tar -xvf' #解压tar
+alias ...tar='tar -czf' #压缩tar
+alias ...tar-un='tar -xzvf' #解压tar
+
 #shell
-alias ..='cd ..'
-alias ...='cd .. && cd ..'
-alias ....='cd .. && cd .. && cd ..'
 alias oas='open -a Simulator'
-alias dusm='du -sm *'
-alias dush='du -sh *'
 alias .now='cd /opt/exp'
-alias .zsh='code ~/.zshrc'
-alias .bash='code ~/.bash_profile'
-alias .key='code ~/pillarkeys'
+alias .zsh='vim ~/.zshrc'
+alias .bash='vim ~/.bash_profile'
+alias .key='vim ~/pillarkeys'
 alias .o='cd /opt'
 alias .d='cd ~/Desktop/'
 alias .c='cd ~/Documents/'
@@ -62,6 +65,9 @@ alias .git='cd ~/Documents/GitHub'
 alias .gitlab='cd /gitlab/data/git-data/repositories/'
 alias ls='ls -p'
 alias .vim='vim ~/.vimrc'
+alias v='vim'
+alias vn='vim -u NONE -N'
+alias .key='vim ~/pillarkeys'
 alias so='source ~/.bash_profile'
 alias show='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias unshow='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
@@ -77,6 +83,13 @@ alias catssh='cat ~/.ssh/id_rsa.pub'
 #google
 alias ssh-gl='ssh 35.197.72.129'
 alias scp-gl='scp ~/.bash_profile ym@35.197.72.129:~/'
+
+# bindo 垃圾桶
+alias ssh-bindo='ssh ci@192.168.192.78' #password: bindo000
+alias sshl-bindo='echo 3132连接到120.79.150.132:27017 && ssh -L 3132:localhost:27017 -i ~/.ssh/id_rsa root@120.79.150.132'
+alias sshkey-bindo='rm -rf ~/.ssh/known_hosts && ssh-copy-id -i ~/.ssh/id_rsa.pub ci@192.168.192.78'
+alias scp-bindo='scp ~/.bash_profile ci@192.168.192.78:~/'
+alias mongo-bindo='ssh -L 27016:localhost:27017 -i ~/.ssh/id_rsa root@120.79.150.132'
 
 #aliyun
 alias ssh-al='ssh root@120.79.150.132'
@@ -96,6 +109,9 @@ alias sshkey-ccos='rm -rf ~/.ssh/known_hosts && ssh-copy-id -i ~/.ssh/id_rsa.pub
 alias scpbash-ccos='scp ~/.bash_profile ~/.bashFunc ~/.vimrc ~/.gitconfig root@47.104.95.22:~/'
 
 # git
+
+# 删除当前目录的 .DS_store
+alias rm.ds="find . -name '*.DS_Store' -type f -delete"  
 alias look='cat /etc/issue && cat /proc/version && dmidecode -t 4 && dmidecode -t 16'
 alias cat-proc-version='cat /proc/version'
 alias zsh-git='open ~/.oh-my-zsh/plugins/git/git.plugin.zsh' # 查看 zsh-git插件
@@ -106,7 +122,7 @@ alias gcb='git checkout -b'
 alias gcd='git checkout develop'
 alias gcm='git checkout master'
 alias gnew..='rm -rf .git && mv new../.git .git && rm -rf new..'
-alias gcoo='git checkout --orphan' # 创建一个orphan的分支，这个分支是独立的
+alias gco='git checkout --orphan' # 创建一个orphan的分支，这个分支是独立的
 alias gll='gil pull --allow-unrelated-histories' # 强制拉取
 alias gba='git branch -a' # 显示所有
 alias gbr='git branch -r' # 只显示远程
@@ -194,6 +210,16 @@ alias d-gitlab="sudo docker run --detach \
     --volume /gitlab/data:/var/opt/gitlab \
     gitlab/gitlab-ce:latest"
 
+alias d-gitlab-mac="sudo docker run --detach \
+    --hostname 120.79.150.132 \
+    --publish 443:443 --publish 71:80 --publish 72:22 \
+    --name gitlab \
+    --restart always \
+    --volume ~/gitlab/config:/etc/gitlab \
+    --volume ~/gitlab/logs:/var/log/gitlab \
+    --volume ~/gitlab/data:/var/opt/gitlab \
+    gitlab/gitlab-ce:latest"
+
 alias dnode='docker start -i node'
 alias dgo='docker start -i go'
 alias de='docker exec -it'
@@ -239,6 +265,7 @@ alias j='java'
 alias jc='javac'
 alias jr='javac $1.java && java $1'
 alias jb='javac -d build src/*.java && cd build && java Main '
+
 
 #yarn
 alias npmup='sudo npm version patch && npm publish'
@@ -299,11 +326,7 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
 
 #python
-alias py='python3'
-alias py2='python'
-alias py3='python3'
-# alias pip='pip3'
-alias pip2='pip2'
+alias p='python3'
 
 
 # 代理方法
@@ -318,7 +341,7 @@ function p-on() {
     # ln -sfv /usr/local/opt/polipo/*.plist ~/Library/LaunchAgents
     # code /usr/local/opt/polipo/homebrew.mxcl.polipo.plist
     # 在配置文件中添加
-    # <string>socksParentProxy=localhost:1086</string>
+    # <!-- <string>socksParentProxy=localhost:1086</string> -->
     # 启用代理
     launchctl load ~/Library/LaunchAgents/homebrew.mxcl.polipo.plist
 
@@ -409,4 +432,23 @@ function -ios(){
         echo "情输入参数 br=编译+运行 b=编译 r=运行"
     fi
 }
+function -lfs(){
+    git lfs install
+    git lfs track "*.sketch"
+    git lfs track "*.ps"
+    git lfs track "*.ai"
+    git lfs track "*.mp4"
+    cat .gitattributes
+}
+function -vim-plug(){
+curl -fLo curl ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+}
+
+function -back(){
+ cp ~/.vimrc ~/pillarkeys/shells/.vimrc
+ cp ~/.bash_profile ~/pillarkeys/shells/.bash_profile
+ # cp -rf ~/.vim ~/pillarkeys/shells/.vim
+}
+source ~/.fzf.bash
 echo -e "已刷新 .bash_profile"

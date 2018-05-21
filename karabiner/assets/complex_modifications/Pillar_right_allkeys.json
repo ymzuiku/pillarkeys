@@ -6,28 +6,6 @@
       "manipulators": [
         {
           "from": {
-            "key_code": "q",
-            "modifiers": {
-              "mandatory": [
-                "right_shift"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "q",
-              "modifiers": [
-                "right_command"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
             "key_code": "1",
             "modifiers": {
               "mandatory": [

@@ -1,6 +1,6 @@
 {
   "alfredsnippet" : {
-    "snippet" : "# gitignore\n\n**\/remote\n**\/.git-\n**\/.git--\n**\/node_modules\/**\n**\/build\/**\n**\/design\/**\n**\/target\/**\n**\/.setting\/**\n**\/.vscode\/**\n**\/dist\/**\n**\/.cache\/**\n\/logs\n\/dist\n\/.cache\n\/.public\n\/.idea\n**\/.idea\n.DS_Store\n.yarn-error.log\n.yarn.lock\nnohup.out\n\n**\/.DS_Store\n**\/.yarn-error.log\n**\/.yarn.lock\n**\/nohup.out\n**\/*.class\n",
+    "snippet" : "# See https:\/\/help.github.com\/ignore-files\/ for more about ignoring files.\n\n# dependencies\n\/node_modules\n\n# testing\n\/coverage\n\n# production\n\/build\n\n# misc\n.DS_Store\n.env.local\n.env.development.local\n.env.test.local\n.env.production.local\n\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*\n\n# gitignore\n\n.vimsession\n.viminfo\n.ter-project\n**\/.git-\n**\/.git--\n**\/node_modules\/**\n**\/build\/**\n**\/design\/**\n**\/target\/**\n**\/.setting\/**\n**\/.vscode\/**\n**\/dist\/**\n**\/.cache\/**\n**.mate\n\/logs\n\/dist\n\/.cache\n\/.public\n.DS_Store\n.yarn-error.log\n.yarn.lock\nnohup.out\n\n\n**\/.DS_Store\n**\/.yarn-error.log\n**\/.yarn.lock\n**\/nohup.out\n**\/*.class",
     "uid" : "73731E65-F7FC-4CEF-AA06-F934A707420D",
     "name" : "gitignore",
     "keyword" : ""
