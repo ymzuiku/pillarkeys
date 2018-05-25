@@ -313,16 +313,11 @@
           },
           "to": [
             {
-              "key_code": "down_arrow"
-            },
-            {
               "key_code": "left_arrow",
               "modifiers": [
-                "right_command"
+                "right_option",
+                "left_shift"
               ]
-            },
-            {
-              "key_code": "delete_or_backspace"
             }
           ],
           "type": "basic"

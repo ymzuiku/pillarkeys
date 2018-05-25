@@ -62,12 +62,12 @@ alias .d='cd ~/Desktop/'
 alias .c='cd ~/Documents/'
 alias .yun='cd /Volumes/data/百度云同步盘/'
 alias .git='cd ~/Documents/GitHub'
+alias .dr='cd /Volumes/data/Dropbox'
+alias .drgit='cd /Volumes/data/Dropbox/git'
 alias .gitlab='cd /gitlab/data/git-data/repositories/'
+
 alias ls='ls -p'
 alias .vim='vim ~/.vimrc'
-alias v='vim'
-alias vn='vim -u NONE -N'
-alias .key='vim ~/pillarkeys'
 alias so='source ~/.bash_profile'
 alias show='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias unshow='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
@@ -200,6 +200,7 @@ alias d-jenkins='docker run -it -p 4008:8080 -p 4009:50000 -v jenkins_home:/var/
 alias d-mysql="docker run -p 127.0.0.1:3306:3306  -v /opt/mysql:/var/lib/mysql  --name mysql -e MYSQL_ROOT_PASSWORD=111Asd -d mysql"
 alias d-redis="docker run -v /data/redis/usr:/usr/local/etc/redis -v /data/redis/data:/data -p 6379:6379 --name redis -d redis redis-server --appendonly yes"
 alias d-redis-noaof="docker run -v /data/redis:/data -p 6379:6379 --name redis -d redis redis-server"
+
 alias d-gitlab="sudo docker run --detach \
     --hostname 120.79.150.132 \
     --publish 443:443 --publish 80:80 --publish 72:22 \
@@ -219,6 +220,17 @@ alias d-gitlab-mac="sudo docker run --detach \
     --volume ~/gitlab/logs:/var/log/gitlab \
     --volume ~/gitlab/data:/var/opt/gitlab \
     gitlab/gitlab-ce:latest"
+alias d-ci="docker run -it --name teamcity-server-instance  \
+    -v ~/teamcity/datadir:/data/teamcity_server/datadir \
+    -v ~/teamcity/logs:/opt/teamcity/logs  \
+    -p 8111:8111 \
+    jetbrains/teamcity-server"
+alias d-pci="proxychains4 docker run -it --name teamcity-server-instance  \
+    -v ~/teamcity/datadir:/data/teamcity_server/datadir \
+    -v ~/teamcity/logs:/opt/teamcity/logs  \
+    -p 8111:8111 \
+    jetbrains/teamcity-server"
+
 
 alias dnode='docker start -i node'
 alias dgo='docker start -i go'
@@ -268,15 +280,15 @@ alias jb='javac -d build src/*.java && cd build && java Main '
 
 
 #yarn
-alias npmup='sudo npm version patch && npm publish'
+alias npmup='sudo npm version patch && proxychains4 npm publish'
 alias y='yarn'
-alias ya='yarn add'
+alias ya='proxychains4 yarn add'
 alias yr='yarn run'
 alias ycs='yarn run clear && yarn run start'
-alias yag='yarn global add'
-alias yad='yarn add --dev'
-alias yi='yarn install'
-alias yu='yarn upgrade'
+alias yag='proxychains4 yarn global add'
+alias yad='proxychains4 yarn add --dev'
+alias yi='proxychains4 yarn install'
+alias yu='proxychains4 yarn upgrade'
 alias yrb='yarn run build'
 alias yrw='yarn run web'
 alias yrs='yarn run start'
@@ -326,10 +338,19 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
 
 #python
-alias p='python3'
+alias py='python3'
 
+# 代理方法1(推荐)
+# brew install proxychains-ng
+# 编辑配置文件 vim /usr/local/etc/proxychains.conf
+# 在 [ProxyList] 下面（也就是末尾）加入代理类型，代理地址和端口
+# 例如使用 TOR 代理，注释掉原来的代理并添加
+# socks5  127.0.0.1 1086
+# 使用
+# proxychains4 curl twitter.com
+alias p='proxychains4'
 
-# 代理方法
+# 代理方法2
 function p-off(){
     unset http_proxy
     unset https_proxy
@@ -339,10 +360,13 @@ function p-on() {
     # 以下注释是使用 polipo 让终端 链接8123至1086端口的代理方法
     # brew install polipo
     # ln -sfv /usr/local/opt/polipo/*.plist ~/Library/LaunchAgents
-    # code /usr/local/opt/polipo/homebrew.mxcl.polipo.plist
+    # vim /usr/local/opt/polipo/homebrew.mxcl.polipo.plist
     # 在配置文件中添加
     # <!-- <string>socksParentProxy=localhost:1086</string> -->
     # 启用代理
+    unset http_proxy
+    unset https_proxy
+
     launchctl load ~/Library/LaunchAgents/homebrew.mxcl.polipo.plist
 
     export no_proxy="localhost,127.0.0.1,localaddress,.taobao.com,.taobao.org,.baidu.org,.baidu.com,.ali.com,.ali.org,qq.com,.qq.org"
@@ -444,11 +468,15 @@ function -vim-plug(){
 curl -fLo curl ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
-
-function -back(){
- cp ~/.vimrc ~/pillarkeys/shells/.vimrc
- cp ~/.bash_profile ~/pillarkeys/shells/.bash_profile
- # cp -rf ~/.vim ~/pillarkeys/shells/.vim
+function -clone() {
+if [ $1 == "dr" ] 
+ then
+ git clone /Volumes/data/Dropbox/git/$2
+elif [ $1 == "github" ]
+ then
+ git clone git@github.com:ymzuiku/$2
+fi
 }
+
 source ~/.fzf.bash
 echo -e "已刷新 .bash_profile"
