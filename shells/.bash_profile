@@ -63,7 +63,7 @@ alias .c='cd ~/Documents/'
 alias .yun='cd /Volumes/data/百度云同步盘/'
 alias .git='cd ~/Documents/GitHub'
 alias .dr='cd /Volumes/data/Dropbox'
-alias .drgit='cd /Volumes/data/Dropbox/git'
+alias .macgit='cd /Volumes/data/git'
 alias .gitlab='cd /gitlab/data/git-data/repositories/'
 
 alias ls='ls -p'
@@ -469,12 +469,15 @@ curl -fLo curl ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 function -clone() {
-if [ $1 == "dr" ] 
+if [ $1 == "mac" ] 
  then
- git clone /Volumes/data/Dropbox/git/$2
+ git clone /Volumes/data/git/$2 $3 $4
 elif [ $1 == "github" ]
  then
- git clone git@github.com:ymzuiku/$2
+ git clone git@github.com:ymzuiku/$2 $3 $4
+elif [ $1 == "al" ]
+then
+git clone ssh://git@workos.top:72/$2 $3 $4
 fi
 }
 
