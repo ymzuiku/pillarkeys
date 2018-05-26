@@ -202,7 +202,7 @@
         "command": "-projectManager.listProjects"
     },
     {
-        "key": "cmd+e p",
+        "key": "cmd+e w",
         "command": "git.push"
     },
     {
@@ -372,7 +372,7 @@
         "command": "-workbench.action.openEditorAtIndex9"
     },
     {
-        "key": "cmd+e l",
+        "key": "cmd+e r",
         "command": "git.pull"
     },
     {
@@ -380,7 +380,7 @@
         "command": "git.createTag"
     },
     {
-        "key": "cmd+e f",
+        "key": "cmd+e p",
         "command": "git.stashPop"
     },
     {
@@ -398,5 +398,9 @@
     {
         "key": "cmd+e a",
         "command": "git.commitAllAmend"
+    },
+    {
+        "key": "cmd+e s",
+        "command": "git.stageAll"
     }
 ]
