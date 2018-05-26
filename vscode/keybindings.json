@@ -214,5 +214,15 @@
         "key": "alt+cmd+f",
         "command": "-workbench.view.extension.favorites-explorer",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+g",
+        "command": "workbench.view.scm",
+        "when": "gitlens:enabled && gitlens:keymap == 'chorded'"
+    },
+    {
+        "key": "ctrl+shift+g g",
+        "command": "-workbench.view.scm",
+        "when": "gitlens:enabled && gitlens:keymap == 'chorded'"
     }
 ]
