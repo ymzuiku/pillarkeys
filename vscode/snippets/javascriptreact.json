@@ -38,13 +38,6 @@
     ],
     "description": "throttle"
   },
-  "console.log($1)": {
-    "prefix": "log",
-    "body": [
-      "console.log($1)"
-    ],
-    "description": "console.log($1)"
-  },
   "egg-app": {
     "prefix": "egg-app",
     "body": [
@@ -200,76 +193,13 @@
     "body": [
       "const isProd = process.env.NODE_ENV === 'production';"
     ]
-  },
-  "const=require": {
-    "prefix": "const=require",
-    "body": [
-      "const $2 = require('$1');"
-    ],
-    "description": "const=require"
-  },
-  "import-meteor": {
-    "prefix": "import-meteor",
-    "body": [
-      "import { Meteor } from 'meteor/meteor';"
-    ],
-    "description": "import-meteor"
-  },
-  "import-meteor-withTracker": {
-    "prefix": "import-meteor-withTracker",
-    "body": [
-      "import { withTracker } from 'meteor/react-meteor-data';"
-    ],
-    "description": "import-meteor-withTracker"
-  },
-  "import-meteor-mongo": {
-    "prefix": "import-meteor-mongo",
-    "body": [
-      "import { Mongo } from 'meteor/mongo';"
-    ],
-    "description": "import-meteor-mongo"
-  },
-  "import-meteor-check": {
-    "prefix": "import-meteor-check",
-    "body": [
-      "import { check } from 'meteor/check';"
-    ],
-    "description": "import-meteor-check"
-  },
-  "afn": {
-    "prefix": "afm",
-    "body": [
-      "$1 => $2"
-    ],
-    "description": "x => x"
-  },
+  },  
   "af": {
     "prefix": "af",
     "body": [
       "($1) => {}"
     ],
     "description": "() => {}"
-  },
-  "class-react-pureComponent": {
-    "prefix": "class-react-pureCompent",
-    "body": [
-      "class $1 extends PureComponent {",
-      "  render() {",
-      "    return (",
-      "      ",
-      "    );",
-      "  }",
-      "}",
-      ""
-    ],
-    "description": "class-react-pureComponent"
-  },
-  "import-ramda": {
-    "prefix": "import-ramda",
-    "body": [
-      "import R from 'ramda';",
-    ],
-    "description": "import-ramda"
   },
   "import-react": {
     "prefix": "import-react",
@@ -313,20 +243,6 @@
     ],
     "description": "static-defalutProps"
   },
-  "import-react-dom-render": {
-    "prefix": "import-react-dom-render",
-    "body": [
-      "import { render } from 'react-dom';"
-    ],
-    "description": "import-react-dom-render"
-  },
-  "import-react-dom-findDOMNode": {
-    "prefix": "import-react-dom-findDOMNode",
-    "body": [
-      "import { findDOMNode } from 'react-dom';"
-    ],
-    "description": "import-react-dom-findDOMNode"
-  },
   "func-event-preventDefault": {
     "prefix": "func-event-preventDefault",
     "body": [
@@ -346,40 +262,19 @@
     ],
     "description": "type-props"
   },
-  "this.props.": {
-    "prefix": "tp",
-    "body": [
-      "this.props."
-    ],
-    "description": "this.props."
-  },
-  "this.state.": {
-    "prefix": "ts",
-    "body": [
-      "this.state."
-    ],
-    "description": "this.state."
-  },
-  "this.setState()": {
-    "prefix": "tss",
-    "body": [
-      "this.setState();"
-    ],
-    "description": "this.setState()"
-  },
   "eslint-disable-next-line": {
     "prefix": "eslint-disable-next-line",
     "body": "// eslint-disable-next-line",
   },
   "/* eslint no-unused-vars:0 */": {
-    "prefix": "eslint no-unused-vars:0",
+    "prefix": "eslint-no-unused-vars:0",
     "body": [
       "/* eslint no-unused-vars:0 */"
     ],
     "description": "/* eslint no-unused-vars:0 */"
   },
   "/* eslint prefer-const:0 */": {
-    "prefix": "eslint prefer-const:0",
+    "prefix": "eslint-prefer-const:0",
     "body": [
       "/* eslint prefer-const:0 */"
     ],
@@ -473,80 +368,6 @@
       "this.props.navigation.setParams()"
     ],
     "description": "this.props.navigation.setParams()"
-  },
-  "componentDidMount() {}": {
-    "prefix": "componentDidMount() {}",
-    "body": [
-      "componentDidMount() {}",
-    ],
-    "description": "componentDidMount() {}"
-  },
-  "componentWillMount() {}": {
-    "prefix": "componentWillMount() {}",
-    "body": [
-      "componentWillMount() {}",
-    ],
-    "description": "componentWillMount() {}"
-  },
-  "componentWillReceiveProps(nextProps) {}": {
-    "prefix": "componentWillReceiveProps(nextProps) {}",
-    "body": [
-      "componentWillReceiveProps(nextProps) {",
-      "  return nextProps;",
-      "}"
-    ],
-    "description": "componentWillReceiveProps(nextProps) {}"
-  },
-  "shouldComponentUpdate(nextProps, nextState) {}": {
-    "prefix": "shouldComponentUpdate(nextProps, nextState) {}",
-    "body": [
-      "shouldComponentUpdate(nextProps, nextState) {",
-      "  return true",
-      "}"
-    ],
-    "description": "shouldComponentUpdate(nextProps, nextState) {}"
-  },
-  "componentWillUnmount() {}": {
-    "prefix": "componentWillUnmount() {}",
-    "body": [
-      "componentWillUnmount() {}",
-    ],
-    "description": "componentWillUnmount() {}"
-  },
-  "componentWillUpdate() {}": {
-    "prefix": "componentWillUpdate() {}",
-    "body": [
-      "componentWillUpdate() {}",
-    ],
-    "description": "componentWillUpdate() {}"
-  },
-  "componentDidUpdate() {}": {
-    "prefix": "componentDidUpdate() {}",
-    "body": [
-      "componentDidUpdate() {}",
-    ],
-    "description": "componentDidUpdate() {}"
-  },
-  "static navigationOptions={}": {
-    "prefix": "static navigationOptions={}",
-    "body": [
-      "static navigationOptions = ({ navigation }) => {",
-      "  const { params = {} } = navigation.state;",
-      "  return {",
-      "    title: 'home',",
-      "    gesturesEnabled: true,",
-      "    headerStyle: {",
-      "      backgroundColor: '#55f',",
-      "    },",
-      "    headerTintColor: '#fff',",
-      "    headerTitleStyle: {",
-      "      fontWeight: 'bold',",
-      "    },",
-      "    ...params,",
-      "  };",
-      "};"
-    ],
-    "description": "static navigationOptions={}"
   },
   "backgroundColor": {
     "prefix": "backgroundColor",
@@ -647,8 +468,8 @@
     ],
     "description": "import { connect } from 'react-redux';"
   },
-  "func mapStateToProps": {
-    "prefix": "func mapStateToProps",
+  "mapStateToProps": {
+    "prefix": "mapStateToProps",
     "body": [
       "function mapStateToProps(state, ownProps) {",
       "  return {",
@@ -658,8 +479,8 @@
     ],
     "description": "func mapStateToProps"
   },
-  "func mapDispatchToProps": {
-    "prefix": "func mapDispatchToProps",
+  "mapDispatchToProps": {
+    "prefix": "mapDispatchToProps",
     "body": [
       "function mapDispatchToProps(dispatch, ownProps) {",
       "  return {",
@@ -681,27 +502,7 @@
     ],
     "description": "connect"
   },
-  "next-goPath": {
-    "prefix": "next-goPath",
-    "body": [
-      "const goPath = () => {",
-      "  Router.push({",
-      "    pathname: '/',",
-      "    query: {}",
-      "  });",
-      "};"
-    ],
-    "description": "next-goPath"
-  },
-  "delay-async-await": {
-    "prefix": "delay-async-await",
-    "body": [
-      "const delay = async () => {}",
-      "delay();",
-    ],
-    "description": "delay-async-await"
-  },
-  "createStore-thunk-devtool": {
+  "new-createStore-thunk-devtool": {
     "prefix": "createStore-thunk-devtool",
     "body": [
       "import { createStore, applyMiddleware } from 'redux'",

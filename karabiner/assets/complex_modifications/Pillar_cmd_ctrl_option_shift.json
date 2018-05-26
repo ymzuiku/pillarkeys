@@ -1,9 +1,12 @@
 {
-      "description": "CapsLock to Hyper/Escape",
+  "title": "Pillar_cmd_ctrl_option_shift",
+  "rules": [
+    {
+      "description": "Pillar_cmd_ctrl_option_shift",
       "manipulators": [
         {
           "from": {
-            "key_code": "caps_lock",
+            "key_code": "right_shift",
             "modifiers": {
               "optional": [
                 "any"
@@ -12,7 +15,7 @@
           },
           "to": [
             {
-              "key_code": "right_shift",
+              "key_code": "left_shift",
               "modifiers": [
                 "right_command",
                 "right_control",
@@ -22,10 +25,11 @@
           ],
           "to_if_alone": [
             {
-              "key_code": "caps_lock"
+              "key_code": "right_shift"
             }
           ],
           "type": "basic"
         }
       ]
     }
+}

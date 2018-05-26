@@ -95,7 +95,7 @@ alias mongo-bindo='ssh -L 27016:localhost:27017 -i ~/.ssh/id_rsa root@120.79.150
 alias ssh-al='ssh root@120.79.150.132'
 alias sshl-al='echo 3132连接到120.79.150.132:27017 && ssh -L 3132:localhost:27017 -i ~/.ssh/id_rsa root@120.79.150.132'
 alias sshkey-al='rm -rf ~/.ssh/known_hosts && ssh-copy-id -i ~/.ssh/id_rsa.pub root@120.79.150.132'
-alias scp-al='scp ~/.bash_profile root@120.79.150.132:~/'
+alias scp-al='scp ~/pillarkeys/shells/.bash_profile ~/pillarkeys/shells/.vimrc root@120.79.150.132:~/'
 alias mongo-al='ssh -L 27016:localhost:27017 -i ~/.ssh/id_rsa root@120.79.150.132'
 
 #aliyun2
