@@ -382,5 +382,9 @@
     {
         "key": "ctrl+a c",
         "command": "git.commitAll"
+    },
+    {
+        "key": "ctrl+a s",
+        "command": "git.stash"
     }
 ]
