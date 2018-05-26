@@ -202,7 +202,7 @@
         "command": "-projectManager.listProjects"
     },
     {
-        "key": "ctrl+p",
+        "key": "ctrl+a p",
         "command": "git.push"
     },
     {
@@ -372,7 +372,15 @@
         "command": "-workbench.action.openEditorAtIndex9"
     },
     {
-        "key": "ctrl+shift+p",
+        "key": "ctrl+a l",
         "command": "git.pull"
+    },
+    {
+        "key": "ctrl+a t",
+        "command": "git.createTag"
+    },
+    {
+        "key": "ctrl+a c",
+        "command": "git.commitAll"
     }
 ]
