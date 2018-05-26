@@ -1544,6 +1544,50 @@
             }
           ],
           "from": {
+            "key_code": "semicolon"
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": ["right_command"]
+            },
+            {
+              "key_code": "semicolon"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "capvim",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "comma"
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": ["right_command"]
+            },
+            {
+              "key_code": "comma"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "capvim",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
             "key_code": "commma"
           },
           "to": [

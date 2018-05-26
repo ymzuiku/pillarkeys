@@ -10,25 +10,16 @@
         "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
     },
     {
-        "key": "cmd+r",
-        "command": "editor.action.formatDocument",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
         "key": "shift+alt+f",
         "command": "editor.action.formatDocument",
         "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "cmd+e",
-        "command": "workbench.action.quickOpen"
     },
     {
         "key": "cmd+p",
         "command": "workbench.action.quickOpen"
     },
     {
-        "key": "shift+cmd+r",
+        "key": "cmd+r",
         "command": "editor.action.rename",
         "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
     },
