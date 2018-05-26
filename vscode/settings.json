@@ -78,5 +78,6 @@
   },
   "workbench.startupEditor": "newUntitledFile",
   "gitlens.gitExplorer.files.layout": "list",
-  "git.enableSmartCommit": true
+  "git.enableSmartCommit": true,
+  "git.autofetch": true
 }
