@@ -43,47 +43,6 @@
             }
           ],
           "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "q",
-            "modifiers": {
-              "mandatory": [
-                "left_command"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "mission_control"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "q",
-            "modifiers": {
-              "mandatory": [
-                "left_option"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "q",
-              "modifiers": [
-                "right_command"
-              ]
-            }
-          ],
-          "type": "basic"
         }
       ]
     }
