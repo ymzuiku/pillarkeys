@@ -202,7 +202,7 @@
         "command": "-projectManager.listProjects"
     },
     {
-        "key": "cmd+e w",
+        "key": "ctrl+shift+p",
         "command": "git.push"
     },
     {
@@ -372,35 +372,35 @@
         "command": "-workbench.action.openEditorAtIndex9"
     },
     {
-        "key": "cmd+e r",
+        "key": "ctrl+shift+l",
         "command": "git.pull"
     },
     {
-        "key": "cmd+e t",
+        "key": "ctrl+shift+t",
         "command": "git.createTag"
     },
     {
-        "key": "cmd+e f",
-        "command": "git.stashPop"
-    },
-    {
-        "key": "cmd+e c",
+        "key": "ctrl+shift+c",
         "command": "git.checkout"
     },
     {
-        "key": "cmd+e n",
-        "command": "git.clone"
+        "key": "ctrl+shift+i",
+        "command": "git.init"
     },
     {
-        "key": "cmd+e i",
-        "command": "git.ignore"
+        "key": "ctrl+shift+a",
+        "command": "git.commitAll"
     },
     {
-        "key": "cmd+e a",
-        "command": "git.commitAllAmend"
+        "key": "ctrl+shift+x",
+        "command": "git.deleteBranch"
     },
     {
-        "key": "cmd+e shift+s",
-        "command": "git.commitStagedAmend"
+        "key": "ctrl+shift+m",
+        "command": "git.merge"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "git.renameBranch"
     }
 ]
