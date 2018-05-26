@@ -202,11 +202,7 @@
         "command": "-projectManager.listProjects"
     },
     {
-<<<<<<< HEAD
         "key": "ctrl+shift+p",
-=======
-        "key": "cmd+e w",
->>>>>>> 27e67b7391945e4f16bdfb1885d6ee0437af1c5e
         "command": "git.push"
     },
     {
@@ -376,11 +372,7 @@
         "command": "-workbench.action.openEditorAtIndex9"
     },
     {
-<<<<<<< HEAD
         "key": "ctrl+shift+l",
-=======
-        "key": "cmd+e r",
->>>>>>> 27e67b7391945e4f16bdfb1885d6ee0437af1c5e
         "command": "git.pull"
     },
     {
@@ -388,13 +380,8 @@
         "command": "git.createTag"
     },
     {
-<<<<<<< HEAD
         "key": "ctrl+shift+c",
         "command": "git.checkout"
-=======
-        "key": "cmd+e p",
-        "command": "git.stashPop"
->>>>>>> 27e67b7391945e4f16bdfb1885d6ee0437af1c5e
     },
     {
         "key": "ctrl+shift+i",
@@ -415,5 +402,9 @@
     {
         "key": "ctrl+shift+r",
         "command": "git.renameBranch"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "git.stage"
     }
 ]
