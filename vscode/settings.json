@@ -77,5 +77,6 @@
     "Temp/": true
   },
   "workbench.startupEditor": "newUntitledFile",
-  "gitlens.gitExplorer.files.layout": "list"
+  "gitlens.gitExplorer.files.layout": "list",
+  "git.enableSmartCommit": true
 }

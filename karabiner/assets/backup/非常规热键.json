@@ -70,35 +70,3 @@
     "description": "escape"
   }
 }
-"key-delete_or_backspace": {
-    "prefix": "key-delete_or_backspace",
-    "body": "delete_or_backspace",
-    "description": "delete"
-  },
-  "key-return_or_enter": {
-    "prefix": "key-return_or_enter",
-    
-    "body": "return_or_enter",
-    "description": "return_or_enter"
-    "body": "escape",
-  },
-  "key-escape": {
-    "prefix": "key-escape",
-    "description": "escape"
-  }
-}  "key-delete_or_backspace": {
-    "prefix": "key-delete_or_backspace",
-    "body": "delete_or_backspace",
-    "description": "delete"
-  },
-  "key-return_or_enter": {
-    "prefix": "key-return_or_enter",
-    "body": "return_or_enter",
-    "description": "return_or_enter"
-  },
-  "key-escape": {
-    "prefix": "key-escape",
-    "body": "escape",
-    "description": "escape"
-  }
-}
