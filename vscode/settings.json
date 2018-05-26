@@ -76,5 +76,6 @@
     "temp/": true,
     "Temp/": true
   },
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile",
+  "gitlens.gitExplorer.files.layout": "list"
 }

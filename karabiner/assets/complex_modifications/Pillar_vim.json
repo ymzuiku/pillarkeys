@@ -179,42 +179,6 @@
             }
           ],
           "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "comma",
-            "modifiers": {
-              "mandatory": ["left_option"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "right_arrow",
-              "modifiers": ["right_command"]
-            },
-            {
-              "key_code": "comma"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "semicolon",
-            "modifiers": {
-              "mandatory": ["left_option"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "right_arrow",
-              "modifiers": ["right_command"]
-            },
-            {
-              "key_code": "semicolon"
-            }
-          ],
-          "type": "basic"
         }
       ]
     }

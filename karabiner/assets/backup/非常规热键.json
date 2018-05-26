@@ -1,0 +1,104 @@
+{
+  "key-grave_accent_and_tilde": {
+    "prefix": "key-grave_accent_and_tilde",
+    "body": "grave_accent_and_tilde",
+    "description": "`"
+  },
+  "key-hyphen": {
+    "prefix": "key-hyphen",
+    "body": "hyphen",
+    "description": "-"
+  },
+  "key-equal_sign": {
+    "prefix": "key-equal_sign",
+    "body": "equal_sign",
+    "description": "="
+  },
+  "key-open_bracket": {
+    "prefix": "key-open_bracket",
+    "body": "open_bracket",
+    "description": "["
+  },
+  "key-close_bracket": {
+    "prefix": "key-close_bracket",
+    "body": "close_bracket",
+    "description": "]"
+  },
+  "key-backslash": {
+    "prefix": "key-backslash",
+    "body": "backslash",
+    "description": "\\"
+  },
+  "key-semicolon": {
+    "prefix": "key-semicolon",
+    "body": "semicolon",
+    "description": ";"
+  },
+  "key-quote": {
+    "prefix": "key-quote",
+    "body": "quote",
+    "description": "'"
+  },
+  "key-comma": {
+    "prefix": "key-comma",
+    "body": "comma",
+    "description": ","
+  },
+  "key-period": {
+    "prefix": "key-period",
+    "body": "period",
+    "description": "."
+  },
+  "key-slash": {
+    "prefix": "key-slash",
+    "body": "slash",
+    "description": "/"
+  },
+  "key-delete_or_backspace": {
+    "prefix": "key-delete_or_backspace",
+    "body": "delete_or_backspace",
+    "description": "delete"
+  },
+  "key-return_or_enter": {
+    "prefix": "key-return_or_enter",
+    "body": "return_or_enter",
+    "description": "return_or_enter"
+  },
+  "key-escape": {
+    "prefix": "key-escape",
+    "body": "escape",
+    "description": "escape"
+  }
+}
+"key-delete_or_backspace": {
+    "prefix": "key-delete_or_backspace",
+    "body": "delete_or_backspace",
+    "description": "delete"
+  },
+  "key-return_or_enter": {
+    "prefix": "key-return_or_enter",
+    
+    "body": "return_or_enter",
+    "description": "return_or_enter"
+    "body": "escape",
+  },
+  "key-escape": {
+    "prefix": "key-escape",
+    "description": "escape"
+  }
+}  "key-delete_or_backspace": {
+    "prefix": "key-delete_or_backspace",
+    "body": "delete_or_backspace",
+    "description": "delete"
+  },
+  "key-return_or_enter": {
+    "prefix": "key-return_or_enter",
+    "body": "return_or_enter",
+    "description": "return_or_enter"
+  },
+  "key-escape": {
+    "prefix": "key-escape",
+    "body": "escape",
+    "description": "escape"
+  }
+}

@@ -16,7 +16,7 @@
     },
     {
         "key": "shift+alt+f",
-        "command": "-editor.action.formatDocument",
+        "command": "editor.action.formatDocument",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
@@ -74,12 +74,12 @@
         "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
     },
     {
-        "key": "n",
+        "key": "f",
         "command": "explorer.newFile",
         "when": "explorerViewletFocus && !inputFocus"
     },
     {
-        "key": "m",
+        "key": "g",
         "command": "explorer.newFolder",
         "when": "explorerViewletFocus && !inputFocus"
     },
@@ -142,14 +142,6 @@
         "when": "terminalFocus"
     },
     {
-        "key": "alt+e",
-        "command": "workbench.action.openRecent"
-    },
-    {
-        "key": "ctrl+r",
-        "command": "-workbench.action.openRecent"
-    },
-    {
         "key": "alt+u",
         "command": "editor.action.transformToUppercase"
     },
@@ -164,11 +156,11 @@
     },
     {
         "key": "shift+cmd+f12",
-        "command": "-editor.action.peekImplementation",
+        "command": "editor.action.peekImplementation",
         "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
     },
     {
-        "key": "alt+,",
+        "key": "cmd+.",
         "command": "workbench.action.openGlobalKeybindings"
     },
     {
@@ -221,8 +213,15 @@
         "when": "gitlens:enabled && gitlens:keymap == 'chorded'"
     },
     {
-        "key": "ctrl+shift+g g",
-        "command": "-workbench.view.scm",
-        "when": "gitlens:enabled && gitlens:keymap == 'chorded'"
+        "key": "alt+t",
+        "command": "projectManager.saveProject"
+    },
+    {
+        "key": "alt+e",
+        "command": "projectManager.listProjects"
+    },
+    {
+        "key": "alt+cmd+p",
+        "command": "-projectManager.listProjects"
     }
 ]
