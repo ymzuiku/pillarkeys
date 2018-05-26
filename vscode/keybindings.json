@@ -380,10 +380,6 @@
         "command": "git.createTag"
     },
     {
-        "key": "cmd+e s",
-        "command": "git.stash"
-    },
-    {
         "key": "cmd+e f",
         "command": "git.stashPop"
     },
