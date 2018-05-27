@@ -11,8 +11,12 @@
           "to": [
             {
               "select_input_source": {
-                "input_source_id": "com.apple.keylayout.US"
+                "input_source_id": "com.apple.keylayout.ABC"
               }
+            },
+            {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
             },
             {
               "set_variable": {
@@ -36,9 +40,61 @@
           },
           "to": [
             {
+              "key_code": "f8",
+              "modifiers": ["right_option", "right_control"]
+            },
+            {
               "set_variable": {
                 "name": "capvim",
                 "value": 98
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "capvim",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "m"
+          },
+          "to": [
+            {
+              "select_input_source": {
+                "input_source_id": "com.sogou.inputmethod.sogou.pinyin"
+              }
+            },
+            {
+              "key_code": "f9",
+              "modifiers": ["right_option", "right_control"]
+            },
+            {
+              "set_variable": {
+                "name": "capvim",
+                "value": 99
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "q"
+          },
+          "to": [
+            {
+              "key_code": "f11",
+              "modifiers": ["right_option", "right_control"]
+            },
+            {
+              "set_variable": {
+                "name": "capvim",
+                "value": 0
               }
             }
           ],
@@ -57,14 +113,13 @@
           },
           "to": [
             {
-              "select_input_source": {
-                "input_source_id": "com.sogou.inputmethod.sogou.pinyin"
-              }
+              "key_code": "f11",
+              "modifiers": ["right_option", "right_control"]
             },
             {
               "set_variable": {
                 "name": "capvim",
-                "value": 99
+                "value": 0
               }
             }
           ],
@@ -83,14 +138,81 @@
           },
           "to": [
             {
-              "select_input_source": {
-                "input_source_id": "com.sogou.inputmethod.sogou.pinyin"
-              }
+              "key_code": "f11",
+              "modifiers": ["right_option", "right_control"]
             },
             {
               "set_variable": {
                 "name": "capvim",
-                "value": 99
+                "value": 0
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "capvim",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "i",
+            "modifiers":{
+              "mandatory":[
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f11",
+              "modifiers": ["right_option", "right_control"]
+            },
+            {
+              "key_code": "left_arrow",
+              "modifiers": ["right_command"]
+            },
+            {
+              "set_variable": {
+                "name": "capvim",
+                "value": 0
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "capvim",
+              "type": "variable_if",
+              "value": 2
+            }
+          ],
+          "from": {
+            "key_code": "i",
+            "modifiers":{
+              "mandatory":[
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f11",
+              "modifiers": ["right_option", "right_control"]
+            },
+            {
+              "key_code": "left_arrow",
+              "modifiers": ["right_command"]
+            },
+            {
+              "set_variable": {
+                "name": "capvim",
+                "value": 0
               }
             }
           ],
@@ -109,9 +231,8 @@
           },
           "to": [
             {
-              "select_input_source": {
-                "input_source_id": "com.apple.keylayout.ABC"
-              }
+              "key_code": "f10",
+              "modifiers": ["right_option", "right_control"]
             },
             {
               "set_variable": {
@@ -138,9 +259,8 @@
           },
           "to": [
             {
-              "select_input_source": {
-                "input_source_id": "com.apple.keylayout.ABC"
-              }
+              "key_code": "f10",
+              "modifiers": ["right_option", "right_control"]
             },
             {
               "key_code": "right_arrow",
@@ -176,11 +296,6 @@
           },
           "to": [
             {
-              "select_input_source": {
-                "input_source_id": "com.apple.keylayout.ABC"
-              }
-            },
-            {
               "key_code": "right_arrow",
               "modifiers": ["right_shift"]
             },
@@ -202,98 +317,12 @@
             }
           ],
           "from": {
-            "key_code": "s"
-          },
-          "to": [
-            {
-              "select_input_source": {
-                "input_source_id": "com.apple.keylayout.ABC"
-              }
-            },
-            {
-              "set_variable": {
-                "name": "capvim",
-                "value": 0
-              }
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "capvim",
-              "type": "variable_if",
-              "value": 2
-            }
-          ],
-          "from": {
-            "key_code": "s"
-          },
-          "to": [
-            {
-              "select_input_source": {
-                "input_source_id": "com.apple.keylayout.ABC"
-              }
-            },
-            {
-              "set_variable": {
-                "name": "capvim",
-                "value": 0
-              }
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "capvim",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "s",
-            "modifiers": {
-              "mandatory": ["left_shift"]
-            }
-          },
-          "to": [
-            {
-              "select_input_source": {
-                "input_source_id": "com.apple.keylayout.ABC"
-              }
-            },
-            {
-              "set_variable": {
-                "name": "capvim",
-                "value": 0
-              }
-            },
-            {
-              "key_code": "left_arrow",
-              "modifiers": ["right_command"]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "capvim",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
             "key_code": "a"
           },
           "to": [
             {
-              "select_input_source": {
-                "input_source_id": "com.apple.keylayout.ABC"
-              }
+              "key_code": "f11",
+              "modifiers": ["right_option", "right_control"]
             },
             {
               "key_code": "left_arrow"
@@ -320,9 +349,8 @@
           },
           "to": [
             {
-              "select_input_source": {
-                "input_source_id": "com.apple.keylayout.ABC"
-              }
+              "key_code": "f11",
+              "modifiers": ["right_option", "right_control"]
             },
             {
               "key_code": "left_arrow"
@@ -351,6 +379,42 @@
             }
           },
           "to": [
+            {
+              "key_code": "f11",
+              "modifiers": ["right_option", "right_control"]
+            },
+            {
+              "set_variable": {
+                "name": "capvim",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "right_arrow",
+              "modifiers": ["right_command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "capvim",
+              "type": "variable_if",
+              "value": 2
+            }
+          ],
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "mandatory": ["left_shift"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f11",
+              "modifiers": ["right_option", "right_control"]
+            },
             {
               "set_variable": {
                 "name": "capvim",
@@ -789,7 +853,7 @@
             }
           ],
           "from": {
-            "key_code": "m"
+            "key_code": "w"
           },
           "to": [
             {
@@ -1017,6 +1081,10 @@
           },
           "to": [
             {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
+            },
+            {
               "set_variable": {
                 "name": "capvim",
                 "value": 1
@@ -1131,12 +1199,6 @@
               "modifiers": ["right_command"]
             },
             {
-              "set_variable": {
-                "name": "capvim",
-                "value": 1
-              }
-            },
-            {
               "key_code": "left_arrow"
             },
             {
@@ -1162,6 +1224,10 @@
               "modifiers": ["right_command"]
             },
             {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
+            },
+            {
               "set_variable": {
                 "name": "capvim",
                 "value": 1
@@ -1210,6 +1276,10 @@
               }
             },
             {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
+            },
+            {
               "key_code": "left_arrow"
             },
             {
@@ -1250,6 +1320,10 @@
                 "name": "capvim",
                 "value": 1
               }
+            },
+            {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
             },
             {
               "key_code": "left_arrow"
@@ -1398,6 +1472,10 @@
                 "name": "capvim",
                 "value": 1
               }
+            },
+            {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
             },
             {
               "key_code": "right_arrow",
@@ -1503,7 +1581,12 @@
             }
           ],
           "from": {
-            "key_code": "q"
+            "key_code": "s",
+            "modifiers":{
+              "mandatory":[
+                "left_shift"
+              ]
+            }
           },
           "to": [
             {
@@ -1610,7 +1693,12 @@
             }
           ],
           "from": {
-            "key_code": "w"
+            "key_code": "w",
+            "modifiers":{
+              "mandatory":[
+                "left_shift"
+              ]
+            }
           },
           "to": [
             {
@@ -3169,6 +3257,10 @@
           },
           "to": [
             {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
+            },
+            {
               "set_variable": {
                 "name": "capvim",
                 "value": 1
@@ -3192,6 +3284,10 @@
             "key_code": "q"
           },
           "to": [
+            {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
+            },
             {
               "set_variable": {
                 "name": "capvim",
@@ -3217,6 +3313,10 @@
           },
           "to": [
             {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
+            },
+            {
               "set_variable": {
                 "name": "capvim",
                 "value": 1
@@ -3240,6 +3340,10 @@
             "key_code": "b"
           },
           "to": [
+            {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
+            },
             {
               "set_variable": {
                 "name": "capvim",
@@ -3265,6 +3369,10 @@
           },
           "to": [
             {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
+            },
+            {
               "set_variable": {
                 "name": "capvim",
                 "value": 1
@@ -3288,6 +3396,10 @@
             "key_code": "v"
           },
           "to": [
+            {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
+            },
             {
               "set_variable": {
                 "name": "capvim",
@@ -3313,6 +3425,10 @@
           },
           "to": [
             {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
+            },
+            {
               "set_variable": {
                 "name": "capvim",
                 "value": 1
@@ -3336,6 +3452,10 @@
             "key_code": "t"
           },
           "to": [
+            {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
+            },
             {
               "set_variable": {
                 "name": "capvim",
@@ -3361,6 +3481,10 @@
           },
           "to": [
             {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
+            },
+            {
               "set_variable": {
                 "name": "capvim",
                 "value": 1
@@ -3384,6 +3508,10 @@
             "key_code": "k"
           },
           "to": [
+            {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
+            },
             {
               "set_variable": {
                 "name": "capvim",
@@ -3409,6 +3537,10 @@
           },
           "to": [
             {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
+            },
+            {
               "set_variable": {
                 "name": "capvim",
                 "value": 1
@@ -3432,6 +3564,10 @@
             "key_code": "g"
           },
           "to": [
+            {
+              "key_code": "f12",
+              "modifiers": ["right_option", "right_control"]
+            },
             {
               "set_variable": {
                 "name": "capvim",

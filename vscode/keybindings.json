@@ -388,10 +388,6 @@
         "command": "git.init"
     },
     {
-        "key": "ctrl+shift+a",
-        "command": "git.commitAll"
-    },
-    {
         "key": "ctrl+shift+x",
         "command": "git.deleteBranch"
     },
